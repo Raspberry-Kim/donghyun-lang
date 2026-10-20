@@ -1,0 +1,23 @@
+Steele 2001 — 맛 점수 (0~5, 3 = 보통),  ■ = 0.1점
+
+loracarbef        3.3 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ ← 보통 이상
+cefdinir          3.0 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ ← 보통 이상
+cefixime          2.8 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+azithromycin      2.5 ■■■■■■■■■■■■■■■■■■■■■■■■■
+ciprofloxacin     2.3 ■■■■■■■■■■■■■■■■■■■■■■■
+TMP/SMX           1.9 ■■■■■■■■■■■■■■■■■■■
+clarithromycin    1.8 ■■■■■■■■■■■■■■■■■■
+amox/clav         1.6 ■■■■■■■■■■■■■■■■
+cefpodoxime       1.6 ■■■■■■■■■■■■■■■■
+cefuroxime axetil 1.4 ■■■■■■■■■■■■■■
+
+3점(보통) 이상: 2개 / 10개,  평균 2.22점
+
+김동현 교수의 순위 (If I were to rank,)
+  Cefdinir  ≥  Cefixime  >>
+  Cefpodoxime  ≥  Cefadroxil  >>>
+  Azithromycin  >  Amoxicillin/clavulanate  >>>>
+  Roxithromycin  >  Clarithromycin  >>>>>
+  Clindamycin (truly awful...@#$%^&)
+
+Which one is the best?
