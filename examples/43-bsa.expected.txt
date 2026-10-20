@@ -1,0 +1,4 @@
+50 cm, 3 kg -> BSA = 0.204 m2  (Newton 10 steps)
+110 cm, 19 kg -> BSA = 0.761 m2  (Newton 12 steps)
+165 cm, 60 kg -> BSA = 1.658 m2  (Newton 13 steps)
+180 cm, 80 kg -> BSA = 2.000 m2  (Newton 14 steps)
