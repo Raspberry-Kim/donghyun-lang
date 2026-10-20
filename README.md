@@ -8,6 +8,7 @@
 
 - **바로 써 보기:** [raspberry-kim.github.io/donghyun-lang](https://raspberry-kim.github.io/donghyun-lang)
 - **현재 버전:** v1.5
+- **언어 명세:** [SPEC.md](SPEC.md)
 
 ## 맛보기
 
