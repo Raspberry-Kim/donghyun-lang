@@ -1,0 +1,7 @@
+	vacc	unvacc
+test(+)	120	380
+test(-)	600	900
+odds(case) = 0.315
+odds(ctrl) = 0.666
+OR = 0.473
+VE = (1 - OR) x 100 = 52.631%

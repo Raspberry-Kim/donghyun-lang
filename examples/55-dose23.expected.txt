@@ -1,0 +1,15 @@
+체중 3 kg, f_mat = 0.500, (BW/70)^0.75 = 0.0942
+  슬라이드 식  AUC × 0.5 × (BW/70)^0.75 × f_mat     = 2.35 mg/kg
+  CL_child = 0.5 L/h/kg × 70 kg × (BW/70)^0.75 × f_mat = 1.65 L/h
+  단위를 맞춘 식  AUC × CL_child ÷ 체중             = 54.9 mg/kg
+
+체중 20 kg, f_mat = 0.947, (BW/70)^0.75 = 0.3908
+  슬라이드 식  AUC × 0.5 × (BW/70)^0.75 × f_mat     = 18.50 mg/kg
+  CL_child = 0.5 L/h/kg × 70 kg × (BW/70)^0.75 × f_mat = 12.95 L/h
+  단위를 맞춘 식  AUC × CL_child ÷ 체중             = 64.8 mg/kg
+
+체중 60 kg, f_mat = 0.982, (BW/70)^0.75 = 0.8908
+  슬라이드 식  AUC × 0.5 × (BW/70)^0.75 × f_mat     = 43.74 mg/kg
+  CL_child = 0.5 L/h/kg × 70 kg × (BW/70)^0.75 × f_mat = 30.62 L/h
+  단위를 맞춘 식  AUC × CL_child ÷ 체중             = 51.0 mg/kg
+

@@ -1,0 +1,6 @@
+AR(vaccine) = 0.043%
+AR(placebo) = 0.884%
+RR = 0.049
+VE = (1 - RR) x 100 = 95.027%
+ARR = 0.840%
+NNV = 120
