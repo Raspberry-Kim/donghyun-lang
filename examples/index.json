@@ -1,0 +1,632 @@
+[
+  {
+    "number": 1,
+    "key": "hello",
+    "name": "Hello, World!",
+    "group": "입문 · 입출력",
+    "file": "01-hello",
+    "input": "",
+    "expectedError": false
+  },
+  {
+    "number": 2,
+    "key": "multiply",
+    "name": "두 수 곱하기 (원라인)",
+    "group": "입문 · 입출력",
+    "file": "02-multiply",
+    "input": "12 34",
+    "expectedError": false
+  },
+  {
+    "number": 3,
+    "key": "swap",
+    "name": "두 변수 맞바꾸기 (임시 변수)",
+    "group": "입문 · 입출력",
+    "file": "03-swap",
+    "input": "7 42",
+    "expectedError": false
+  },
+  {
+    "number": 4,
+    "key": "seconds",
+    "name": "초를 시간·분·초로 나누기 (단위 변환)",
+    "group": "입문 · 입출력",
+    "file": "04-seconds",
+    "input": "3661",
+    "expectedError": false
+  },
+  {
+    "number": 5,
+    "key": "error",
+    "name": "오류 예제",
+    "group": "입문 · 입출력",
+    "file": "05-error",
+    "input": "",
+    "expectedError": true
+  },
+  {
+    "number": 6,
+    "key": "max3",
+    "name": "세 정수 중 최댓값 (비교와 갱신)",
+    "group": "조건문 · 반복문",
+    "file": "06-max3",
+    "input": "-8 12 12",
+    "expectedError": false
+  },
+  {
+    "number": 7,
+    "key": "leap",
+    "name": "윤년 판별 (400·100·4의 배수)",
+    "group": "조건문 · 반복문",
+    "file": "07-leap",
+    "input": "2000",
+    "expectedError": false
+  },
+  {
+    "number": 8,
+    "key": "sum",
+    "name": "1부터 n까지 더하기 (누적 합)",
+    "group": "조건문 · 반복문",
+    "file": "08-sum",
+    "input": "100",
+    "expectedError": false
+  },
+  {
+    "number": 9,
+    "key": "factorial",
+    "name": "팩토리얼 (꽥꽥으로 n 입력)",
+    "group": "조건문 · 반복문",
+    "file": "09-factorial",
+    "input": "5",
+    "expectedError": false
+  },
+  {
+    "number": 10,
+    "key": "countdown",
+    "name": "카운트다운 + 오겡끼데스까",
+    "group": "조건문 · 반복문",
+    "file": "10-countdown",
+    "input": "",
+    "expectedError": false
+  },
+  {
+    "number": 11,
+    "key": "times",
+    "name": "구구단 (꽥꽥으로 단 입력)",
+    "group": "조건문 · 반복문",
+    "file": "11-times",
+    "input": "7",
+    "expectedError": false
+  },
+  {
+    "number": 12,
+    "key": "fizz",
+    "name": "동현버즈 (FizzBuzz, 꽥꽥으로 끝 수)",
+    "group": "조건문 · 반복문",
+    "file": "12-fizz",
+    "input": "30",
+    "expectedError": false
+  },
+  {
+    "number": 13,
+    "key": "fibonacci",
+    "name": "피보나치 수열 (꽥꽥으로 개수 입력)",
+    "group": "조건문 · 반복문",
+    "file": "13-fibonacci",
+    "input": "15",
+    "expectedError": false
+  },
+  {
+    "number": 14,
+    "key": "collatz",
+    "name": "우박수 · 콜라츠 추측 (꽥꽥으로 시작 수)",
+    "group": "조건문 · 반복문",
+    "file": "14-collatz",
+    "input": "27",
+    "expectedError": false
+  },
+  {
+    "number": 15,
+    "key": "digits",
+    "name": "십진 자릿수의 합 (몫과 나머지)",
+    "group": "정수 알고리즘",
+    "file": "15-digits",
+    "input": "-2026",
+    "expectedError": false
+  },
+  {
+    "number": 16,
+    "key": "power",
+    "name": "빠른 거듭제곱 (반복 제곱)",
+    "group": "정수 알고리즘",
+    "file": "16-power",
+    "input": "3 13",
+    "expectedError": false
+  },
+  {
+    "number": 17,
+    "key": "linear",
+    "name": "선형 탐색 (처음 일치하는 위치)",
+    "group": "정수 알고리즘",
+    "file": "17-linear",
+    "input": "6 7  4 7 2 7 9 1",
+    "expectedError": false
+  },
+  {
+    "number": 18,
+    "key": "sort",
+    "name": "다섯 정수 버블 정렬 (인접 교환)",
+    "group": "정수 알고리즘",
+    "file": "18-sort",
+    "input": "9 -2 7 7 0",
+    "expectedError": false
+  },
+  {
+    "number": 19,
+    "key": "change",
+    "name": "거스름돈 동전 세기 (탐욕 알고리즘)",
+    "group": "정수 알고리즘",
+    "file": "19-change",
+    "input": "1260",
+    "expectedError": false
+  },
+  {
+    "number": 20,
+    "key": "prime",
+    "name": "소수 찾기 (꽥꽥으로 범위 N)",
+    "group": "정수 알고리즘",
+    "file": "20-prime",
+    "input": "100",
+    "expectedError": false
+  },
+  {
+    "number": 21,
+    "key": "gcd",
+    "name": "최대공약수 · 유클리드 호제법",
+    "group": "정수 알고리즘",
+    "file": "21-gcd",
+    "input": "1071 462",
+    "expectedError": false
+  },
+  {
+    "number": 22,
+    "key": "triangle",
+    "name": "별 삼각형 (꽥꽥으로 줄 수 입력)",
+    "group": "수학 · 시각화",
+    "file": "22-triangle",
+    "input": "5",
+    "expectedError": false
+  },
+  {
+    "number": 23,
+    "key": "tree",
+    "name": "크리스마스 트리 (꽥꽥으로 높이 입력)",
+    "group": "수학 · 시각화",
+    "file": "23-tree",
+    "input": "9",
+    "expectedError": false
+  },
+  {
+    "number": 24,
+    "key": "html",
+    "name": "웹페이지 그리기 (HTML 출력)",
+    "group": "수학 · 시각화",
+    "file": "24-html",
+    "input": "",
+    "expectedError": false
+  },
+  {
+    "number": 25,
+    "key": "pi",
+    "name": "원주율 π — 마친 공식 (소수 12자리)",
+    "group": "수학 · 시각화",
+    "file": "25-pi",
+    "input": "",
+    "expectedError": false
+  },
+  {
+    "number": 26,
+    "key": "mc",
+    "name": "원주율 π — 몬테카를로 다트 던지기",
+    "group": "수학 · 시각화",
+    "file": "26-mc",
+    "input": "20000 2026",
+    "expectedError": false
+  },
+  {
+    "number": 27,
+    "key": "bday",
+    "name": "생일 문제 (몇 명이면 생일이 겹칠까)",
+    "group": "수학 · 시각화",
+    "file": "27-bday",
+    "input": "",
+    "expectedError": false
+  },
+  {
+    "number": 28,
+    "key": "mandel",
+    "name": "만델브로트 집합 (글자 그림)",
+    "group": "수학 · 시각화",
+    "file": "28-mandel",
+    "input": "",
+    "expectedError": false
+  },
+  {
+    "number": 29,
+    "key": "bin",
+    "name": "십진수 → 이진수 (2의 거듭제곱으로 풀기)",
+    "group": "진법 · 디지털 표현",
+    "file": "29-bin",
+    "input": "3 13 255 59",
+    "expectedError": false
+  },
+  {
+    "number": 30,
+    "key": "bcd",
+    "name": "십진수 → 8421 BCD (니블과 순수 이진 비교)",
+    "group": "진법 · 디지털 표현",
+    "file": "30-bcd",
+    "input": "4 13 59 99 2026",
+    "expectedError": false
+  },
+  {
+    "number": 31,
+    "key": "eff",
+    "name": "BCD 저장 효율 — 비트는 얼마나 더 드나",
+    "group": "진법 · 디지털 표현",
+    "file": "31-eff",
+    "input": "",
+    "expectedError": false
+  },
+  {
+    "number": 32,
+    "key": "forbid",
+    "name": "BCD 금지 코드 1010~1111 찾기",
+    "group": "진법 · 디지털 표현",
+    "file": "32-forbid",
+    "input": "",
+    "expectedError": false
+  },
+  {
+    "number": 33,
+    "key": "add6",
+    "name": "BCD 덧셈과 +6 보정 (9 + 5, 7 + 8)",
+    "group": "진법 · 디지털 표현",
+    "file": "33-add6",
+    "input": "3  9 5  7 8  4 3",
+    "expectedError": false
+  },
+  {
+    "number": 34,
+    "key": "addn",
+    "name": "여러 자리 BCD 덧셈 (자리올림 전파)",
+    "group": "진법 · 디지털 표현",
+    "file": "34-addn",
+    "input": "1234 5678",
+    "expectedError": false
+  },
+  {
+    "number": 35,
+    "key": "sub",
+    "name": "BCD 뺄셈 — 9의 보수와 10의 보수",
+    "group": "진법 · 디지털 표현",
+    "file": "35-sub",
+    "input": "2  13 5  5 13",
+    "expectedError": false
+  },
+  {
+    "number": 36,
+    "key": "rtc",
+    "name": "RTC 시계 칩 해독 — 백신 냉장고 온도 로거",
+    "group": "진법 · 디지털 표현",
+    "file": "36-rtc",
+    "input": "21 32 20 4 41 1 38",
+    "expectedError": false
+  },
+  {
+    "number": 37,
+    "key": "pack32",
+    "name": "32비트 묶음 0x26012914 → 2026-01-29 14시",
+    "group": "진법 · 디지털 표현",
+    "file": "37-pack32",
+    "input": "637610260",
+    "expectedError": false
+  },
+  {
+    "number": 38,
+    "key": "seg7",
+    "name": "7세그먼트 디스플레이 — 혈당 123, 체온 375",
+    "group": "진법 · 디지털 표현",
+    "file": "38-seg7",
+    "input": "3 123 375 2026",
+    "expectedError": false
+  },
+  {
+    "number": 39,
+    "key": "float",
+    "name": "0.1 + 0.2 ≠ 0.3? — 이진 소수와 고정소수점",
+    "group": "진법 · 디지털 표현",
+    "file": "39-float",
+    "input": "",
+    "expectedError": false
+  },
+  {
+    "number": 40,
+    "key": "dna",
+    "name": "DNA 염기 2비트 부호화와 해밍 거리",
+    "group": "진법 · 디지털 표현",
+    "file": "40-dna",
+    "input": "8  0 0 2 2 1 1 3 3  0 0 1 2 1 1 3 3",
+    "expectedError": false
+  },
+  {
+    "number": 41,
+    "key": "hs",
+    "name": "소아 유지 수액량 — Holliday–Segar (4-2-1)",
+    "group": "수액 · 체격 계산",
+    "file": "41-hs",
+    "input": "3 8 15 25 40 60 70",
+    "expectedError": false
+  },
+  {
+    "number": 42,
+    "key": "maintenance",
+    "name": "유지수액 속도·하루량 (첨부 표 7-4, 상한 적용)",
+    "group": "수액 · 체격 계산",
+    "file": "42-maintenance",
+    "input": "25",
+    "expectedError": false
+  },
+  {
+    "number": 43,
+    "key": "bsa",
+    "name": "체표면적 BSA — 모스텔러 공식 (뉴턴법 제곱근)",
+    "group": "수액 · 체격 계산",
+    "file": "43-bsa",
+    "input": "50 3  110 19  165 60  180 80",
+    "expectedError": false
+  },
+  {
+    "number": 44,
+    "key": "tbw",
+    "name": "나이별 체내 총수분(TBW) — 85 − 25·Age/(Age+1)",
+    "group": "수액 · 체격 계산",
+    "file": "44-tbw",
+    "input": "8 0 3 12 24 72 144 216 480",
+    "expectedError": false
+  },
+  {
+    "number": 45,
+    "key": "auc",
+    "name": "약물 농도-시간 곡선과 AUC (사다리꼴 적분)",
+    "group": "약동학 · 약력학",
+    "file": "45-auc",
+    "input": "25 11  0 0  15 320  30 610  60 880  90 940  120 900  180 760  240 620  360 410  480 270  720 120",
+    "expectedError": false
+  },
+  {
+    "number": 46,
+    "key": "pk",
+    "name": "경구 투여 1구획 모형 — 미분방정식 (오일러법)",
+    "group": "약동학 · 약력학",
+    "file": "46-pk",
+    "input": "500 30 1500 300 24",
+    "expectedError": false
+  },
+  {
+    "number": 47,
+    "key": "accum",
+    "name": "반복 투여와 축적 — 정상 상태 도달",
+    "group": "약동학 · 약력학",
+    "file": "47-accum",
+    "input": "100 25 8 8 10",
+    "expectedError": false
+  },
+  {
+    "number": 48,
+    "key": "pde",
+    "name": "피부 속 약물 확산 — 편미분방정식 (FTCS)",
+    "group": "약동학 · 약력학",
+    "file": "48-pde",
+    "input": "",
+    "expectedError": false
+  },
+  {
+    "number": 49,
+    "key": "clear",
+    "name": "신장·간 청소율 — 용량 제한형 vs 혈류 제한형",
+    "group": "약동학 · 약력학",
+    "file": "49-clear",
+    "input": "120 200 800  1500  4  200 1000 100  200 500 100  500 1000 50000  500 500 50000",
+    "expectedError": false
+  },
+  {
+    "number": 50,
+    "key": "mdz",
+    "name": "미다졸람 IV 일시 주사 — C(t) = C0·e^(−kt)와 AUC = D/CL",
+    "group": "약동학 · 약력학",
+    "file": "50-mdz",
+    "input": "2000 40 12",
+    "expectedError": false
+  },
+  {
+    "number": 51,
+    "key": "pkpd",
+    "name": "PK/PD 지표 — %T>MIC, Cmax/MIC, AUC24/MIC",
+    "group": "약동학 · 약력학",
+    "file": "51-pkpd",
+    "input": "500 10 5 8  4  500 2000 8000 32000",
+    "expectedError": false
+  },
+  {
+    "number": 52,
+    "key": "absorb",
+    "name": "나이에 따른 흡수 속도 — 경구 투여 곡선 비교",
+    "group": "약동학 · 약력학",
+    "file": "52-absorb",
+    "input": "10000 1500 300 200",
+    "expectedError": false
+  },
+  {
+    "number": 53,
+    "key": "allo",
+    "name": "상대성장 크기 인자 (BW/70)^0.75 · ^1.0 · ^0.25",
+    "group": "성장 · 성숙과 용량",
+    "file": "53-allo",
+    "input": "6 3 10 20 40 60 70",
+    "expectedError": false
+  },
+  {
+    "number": 54,
+    "key": "hill",
+    "name": "효소 성숙 Hill 함수 — CYP3A4·2D6·1A2",
+    "group": "성장 · 성숙과 용량",
+    "file": "54-hill",
+    "input": "8 24 30 40 52 78 104 156 208",
+    "expectedError": false
+  },
+  {
+    "number": 55,
+    "key": "dose23",
+    "name": "목표 AUC로 소아 용량 계산 (신생아·소아·청소년)",
+    "group": "성장 · 성숙과 용량",
+    "file": "55-dose23",
+    "input": "3  3 500  20 947  60 982",
+    "expectedError": false
+  },
+  {
+    "number": 56,
+    "key": "mgm2",
+    "name": "mg/kg와 mg/m² — 성인 용량의 몇 %를 줄까",
+    "group": "성장 · 성숙과 용량",
+    "file": "56-mgm2",
+    "input": "35 50  75 67  100 75  140 95  200 115  320 138  500 160  700 170",
+    "expectedError": false
+  },
+  {
+    "number": 57,
+    "key": "gmt",
+    "name": "항체가 기하평균 — 산술평균은 왜 틀리나",
+    "group": "면역원성 · 임상통계",
+    "file": "57-gmt",
+    "input": "3 16 64 256",
+    "expectedError": false
+  },
+  {
+    "number": 58,
+    "key": "gmtci",
+    "name": "log2 항체가 통계 — GMT와 95% 신뢰구간",
+    "group": "면역원성 · 임상통계",
+    "file": "58-gmtci",
+    "input": "7 4 5 6 7 6 7 8",
+    "expectedError": false
+  },
+  {
+    "number": 59,
+    "key": "fold",
+    "name": "항체가 상승 배수와 혈청전환율",
+    "group": "면역원성 · 임상통계",
+    "file": "59-fold",
+    "input": "5  16 128  8 16  32 512  64 64  8 64",
+    "expectedError": false
+  },
+  {
+    "number": 60,
+    "key": "verr",
+    "name": "백신 효능 (efficacy) — 상대위험 RR",
+    "group": "면역원성 · 임상통계",
+    "file": "60-verr",
+    "input": "8 18198 162 18325",
+    "expectedError": false
+  },
+  {
+    "number": 61,
+    "key": "veor",
+    "name": "백신 효과 (effectiveness) — 오즈비 OR, 검사음성 설계",
+    "group": "면역원성 · 임상통계",
+    "file": "61-veor",
+    "input": "120 380 600 900",
+    "expectedError": false
+  },
+  {
+    "number": 62,
+    "key": "dx",
+    "name": "진단검사 정확도와 베이즈 정리 (PPV)",
+    "group": "면역원성 · 임상통계",
+    "file": "62-dx",
+    "input": "90 50 10 850  10 100 500",
+    "expectedError": false
+  },
+  {
+    "number": 63,
+    "key": "sir",
+    "name": "SIR 감염병 모형 — 미분방정식",
+    "group": "감염병 · 예방접종",
+    "file": "63-sir",
+    "input": "1000000 10 300 100 160 7",
+    "expectedError": false
+  },
+  {
+    "number": 64,
+    "key": "seir",
+    "name": "SEIR 감염병 모형 — 잠복기 포함",
+    "group": "감염병 · 예방접종",
+    "file": "64-seir",
+    "input": "1000000 10 500 200 200 240 10",
+    "expectedError": false
+  },
+  {
+    "number": 65,
+    "key": "hit",
+    "name": "집단면역 임계치와 필요 접종률",
+    "group": "감염병 · 예방접종",
+    "file": "65-hit",
+    "input": "95 8 15 30 50 120 180",
+    "expectedError": false
+  },
+  {
+    "number": 66,
+    "key": "cold",
+    "name": "백신 냉장고 콜드체인 이탈 감지",
+    "group": "감염병 · 예방접종",
+    "file": "66-cold",
+    "input": "10  800 21  801 20  802 22  1415 35  1416 52  1417 85  1418 121  1419 150  1420 185  1421 50",
+    "expectedError": false
+  },
+  {
+    "number": 67,
+    "key": "mask",
+    "name": "접종력 비트마스크 — 32비트 한 칸으로 환자 거르기",
+    "group": "감염병 · 예방접종",
+    "file": "67-mask",
+    "input": "3 131039 65535 131071",
+    "expectedError": false
+  },
+  {
+    "number": 68,
+    "key": "pcv",
+    "name": "폐렴알균 백신 규칙 엔진 (CDC 2~18세 위험군 권고)",
+    "group": "감염병 · 예방접종",
+    "file": "68-pcv",
+    "input": "6  65535 60 20 0  131071 13 15 0  131071 48 20 0  196607 48 15 0  327679 84 13 1  1114111 36 15 0",
+    "expectedError": false
+  },
+  {
+    "number": 69,
+    "key": "taste",
+    "name": "항생제 시럽 맛 순위 — Steele 2001과 'If I were to rank'",
+    "group": "복약 수용성",
+    "file": "69-taste",
+    "input": "33 30 28 25 23 19 18 16 16 14",
+    "expectedError": false
+  },
+  {
+    "number": 70,
+    "key": "hedonic",
+    "name": "얼굴 척도 VAS와 맛 투표 — Angelilli 2000",
+    "group": "복약 수용성",
+    "file": "70-hedonic",
+    "input": "678 345  626 404  853 249  624 401   4 5  4 7  9 2  3 7",
+    "expectedError": false
+  }
+]
