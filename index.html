@@ -2,8 +2,8 @@
 <html lang="ko"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>동현랭 플레이그라운드 — 나는 동현이냐?</title>
-<meta name="description" content="인하의대 교수 김동현이 만든 난해한 프로그래밍 언어, 동현랭 플레이그라운드.">
+<title>동현랭™ v1.52 플레이그라운드 · 나는 동현이냐?</title>
+<meta name="description" content="인하의대 교수 김동현이 만든 난해한 프로그래밍 언어, 동현랭™ v1.52. 넓어진 플레이그라운드에서 코드를 실행하고 동현초·동현파로 이어진다.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%227%22 fill=%22%23f2b705%22/%3E%3Ctext x=%2216%22 y=%2223%22 font-size=%2218%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-weight=%22900%22 fill=%22%2326211c%22%3E%EB%8F%99%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -198,7 +198,8 @@ select {
 
 body { background: var(--color-bg); }
 
-.wrap { max-width: 1240px; margin: 0 auto; padding: 0 var(--space-6); }
+.wrap { max-width: 1600px; margin: 0 auto; padding: 0 var(--space-10); }
+@media (max-width: 780px) { .wrap { padding: 0 var(--space-6); } }
 
 /* ---------- header ---------- */
 .topbar {
@@ -486,6 +487,9 @@ a.series-item:focus-visible{outline:3px solid #a5791c;outline-offset:3px}
 }
 @media(prefers-reduced-motion:reduce){.series-item{transition:none}a.series-item:hover{transform:none}}
 /* SERIES-NAV-END */
+
+/* v1.52: base.css의 문단 폭 제한과 무관하게 실험실 메뉴와 우측 정렬 */
+.series-links { margin-left: auto; }
 
 </style>
 <script>
@@ -1494,7 +1498,7 @@ a.series-item:focus-visible{outline:3px solid #a5791c;outline-offset:3px}
 </main>
 
 <footer>
-  <div class="wrap">동현랭 v1.5 인하대학교 의과대학 교수 김동현</div>
+  <div class="wrap">동현랭™ v1.52 · 인하대학교 의과대학 교수 김동현</div>
 </footer>
 <div class="toast" id="toast" role="status"></div>
 
