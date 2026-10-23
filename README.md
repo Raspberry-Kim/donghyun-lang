@@ -9,6 +9,10 @@
 - **바로 써 보기:** [raspberry-kim.github.io/donghyun-lang](https://raspberry-kim.github.io/donghyun-lang)
 - **현재 버전:** v1.5
 - **언어 명세:** [SPEC.md](SPEC.md)
+- **동현초™:** [초파리 회로실험실](https://raspberry-kim.github.io/donghyun-lab1/)
+- **동현파™:** [선충 촉각 회로실험실](https://raspberry-kim.github.io/donghyun-lab2/)
+
+세 사이트 상단의 **동현의 작은 실험들** 메뉴로 서로 이동할 수 있다. 문법 안내의 원자(原子) 한자 병기는 괄호로 유지하며, 모바일에서 첫 괄호가 표 밖으로 밀리지 않도록 표시 설정을 보완했다.
 
 ## 맛보기
 
