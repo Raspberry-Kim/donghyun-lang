@@ -11,8 +11,9 @@
 - **언어 명세:** [SPEC.md](SPEC.md)
 - **동현초™:** [초파리 회로실험실](https://raspberry-kim.github.io/donghyun-lab1/)
 - **동현파™:** [선충 촉각 회로실험실](https://raspberry-kim.github.io/donghyun-lab2/)
+- **동현빌™:** [마을 유행 실험실](https://raspberry-kim.github.io/donghyun-lab3/)
 
-세 사이트 상단의 **동현의 작은 실험들** 메뉴로 서로 이동할 수 있다.
+네 사이트 상단의 **동현의 작은 실험들** 메뉴로 서로 이동할 수 있다.
 
 변경 이력은 [CHANGELOG.md](CHANGELOG.md)에 있다.
 
