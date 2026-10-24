@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""동현랭 (Donghyun-lang) v1.5 인터프리터  —  나는 동현이냐? ... 동현이구나"""
+"""동현랭 (Donghyun-lang) v1.52 인터프리터  —  나는 동현이냐? ... 동현이구나"""
 import re, sys
 
 START, END = "나는 동현이냐?", "동현이구나"
