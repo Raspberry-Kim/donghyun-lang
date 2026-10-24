@@ -7,7 +7,7 @@
 한국어로 쓰는 난해한 프로그래밍 언어(esoteric language)다. 실행기, 플레이그라운드, 문법 안내, 예제 70개를 모두 담았다. 설치나 서버 없이 브라우저에서 바로 실행된다.
 
 - **바로 써 보기:** [raspberry-kim.github.io/donghyun-lang](https://raspberry-kim.github.io/donghyun-lang)
-- **현재 버전:** v1.52 (버그 수정·화면 정렬)
+- **현재 버전:** v1.52
 - **언어 명세:** [SPEC.md](SPEC.md)
 - **동현초™:** [초파리 회로실험실](https://raspberry-kim.github.io/donghyun-lab1/)
 - **동현파™:** [선충 촉각 회로실험실](https://raspberry-kim.github.io/donghyun-lab2/)
