@@ -310,6 +310,8 @@ select, .field { font-size: var(--text-sm); padding: 0.45em 0.6em; border-radius
 section.doc { padding: var(--space-16) 0; border-top: 1px solid var(--color-border); }
 section.doc h2 { font-family: var(--font-display); font-weight: 400; font-size: var(--text-xl); }
 section.doc .lead { color: var(--color-text-muted); margin-top: var(--space-2); }
+.maker .maker-name { font-size: var(--text-lg); font-weight: 700; margin-top: var(--space-4); }
+.maker .maker-text { max-width: 760px; margin-top: var(--space-2); line-height: 1.8; }
 .ref-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: var(--space-3); margin-top: var(--space-8); }
 .ref { border: 1px solid var(--color-border); background: var(--color-surface); border-radius: var(--radius-md); padding: var(--space-4); }
 .ref code { font-family: var(--font-code); font-size: 15px; font-weight: 700; display: block; }
@@ -505,6 +507,7 @@ a.series-item:focus-visible{outline:3px solid #a5791c;outline-offset:3px}
       <a href="#reference">문법</a>
       <a href="#embed">HTML에 넣기</a>
       <a href="#encoder">코드 생성기</a>
+      <a href="#maker">만든 사람</a>
     </nav>
     <button class="icon-btn" id="themeBtn" aria-label="밝은/어두운 화면 전환" title="화면 전환">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg>
@@ -1493,6 +1496,14 @@ a.series-item:focus-visible{outline:3px solid #a5791c;outline-offset:3px}
 뿡뿡뿡 동현
 동현이구나</pre>
       </div>
+    </div>
+  </section>
+
+  <section class="doc maker" id="maker">
+    <div class="wrap">
+      <h2>만든 사람</h2>
+      <h3 class="maker-name">김동현</h3>
+      <p class="maker-text">인하대학교 의과대학 의학과 교수, 백신학·감염학을 연구한다. 아내와 두 아들, 그리고 뚱뚱한 강아지와 함께 살고 있다. 난해한 프로그래밍 언어인 동현랭을 만들었다. 몰입과 불면을 즐긴다. 능률과 실질을 숭상한다. 명랑하고 따뜻한 개발을 지향한다.</p>
     </div>
   </section>
 </main>
