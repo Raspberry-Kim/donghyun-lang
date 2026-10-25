@@ -245,6 +245,9 @@ body { background: var(--color-bg); }
 .btn-run { background: var(--color-duck); border-color: var(--color-duck); color: #26211c; }
 .btn-run:hover { background: #ffc61a; }
 .btn-halt { color: var(--color-halt); border-color: color-mix(in srgb, var(--color-halt) 40%, transparent); }
+@keyframes slowBlink { 0%, 100% { background: var(--color-duck); border-color: var(--color-duck); color: #26211c; } 50% { background: var(--color-surface); border-color: var(--color-duck); color: var(--color-text); } }
+#slowBtn[aria-pressed="true"] { background: var(--color-duck); border-color: var(--color-duck); color: #26211c; animation: slowBlink 1s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) { #slowBtn[aria-pressed="true"] { animation: none; } }
 .btn-halt:hover:not(:disabled) { background: color-mix(in srgb, var(--color-halt) 10%, transparent); }
 .btn svg { width: 15px; height: 15px; }
 kbd { font-family: var(--font-code); font-size: 0.75rem; opacity: 0.7; }
@@ -541,7 +544,7 @@ a.series-item:focus-visible{outline:3px solid #a5791c;outline-offset:3px}
           <button class="btn btn-run" id="runBtn" title="Ctrl/⌘ + Enter">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l12-7.5z"></path></svg>실행 <kbd>⌘↵</kbd>
           </button>
-          <button class="btn" id="slowBtn" title="한 줄씩 천천히 실행">
+          <button class="btn" id="slowBtn" title="한 줄씩 천천히 실행 · 실행 중에 다시 누르면 원래 속도" aria-pressed="false">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>천천히
           </button>
           <button class="btn btn-halt" id="haltBtn" disabled="" title="실행 중인 프로그램을 즉시 중단">오겡끼데스까</button>
@@ -2088,7 +2091,9 @@ a.series-item:focus-visible{outline:3px solid #a5791c;outline-offset:3px}
   // ---------- 실행 ----------
   let vm = null, timer = null, running = false;
   const MAX_STEPS = 5e6;
-  function stop() { clearTimeout(timer); timer = null; running = false; $("haltBtn").disabled = true; $("runBtn").disabled = false; $("slowBtn").disabled = false; }
+  let slowMode = false;
+  function setSlow(v) { slowMode = v; $("slowBtn").setAttribute("aria-pressed", String(v)); if (running) setStatus("run", v ? "천천히 실행 중" : "실행 중"); if (!v && curPhys !== -1) { curPhys = -1; render(); } }
+  function stop() { clearTimeout(timer); timer = null; running = false; setSlow(false); $("haltBtn").disabled = true; $("runBtn").disabled = false; $("slowBtn").disabled = false; }
   function finish() {
     stop(); showVars(vm);
     $("steps").textContent = `${vm.steps.toLocaleString()}걸음`;
@@ -2112,23 +2117,23 @@ a.series-item:focus-visible{outline:3px solid #a5791c;outline-offset:3px}
     try {
       vm = new D.VM(code.value, { input: $("stdin").value.split(/\s+/).filter(Boolean), write });
     } catch (e) { vm = null; fail(e); return; }
-    running = true; $("haltBtn").disabled = false; $("runBtn").disabled = true; $("slowBtn").disabled = true;
-    setStatus("run", slow ? "천천히 실행 중" : "실행 중");
+    running = true; $("haltBtn").disabled = false; $("runBtn").disabled = true;
+    setSlow(slow); setStatus("run", slow ? "천천히 실행 중" : "실행 중");
     const tick = () => {
       if (!running) return;
       try {
-        const done = vm.step(slow ? 1 : 20000);
+        const done = vm.step(slowMode ? 1 : 20000);
         $("steps").textContent = `${vm.steps.toLocaleString()}걸음`;
-        if (slow) { curPhys = physOf(vm.pc); render(); showVars(vm); }
+        if (slowMode) { curPhys = physOf(vm.pc); render(); showVars(vm); }
         if (done) return finish();
         if (vm.steps > MAX_STEPS) { const e = new D.DonghyunError(`${MAX_STEPS.toLocaleString()}걸음을 넘었다. 무한 반복이면 오겡끼데스까를 눌러라.`); return fail(e); }
-        timer = setTimeout(tick, slow ? 260 : 0);
+        timer = setTimeout(tick, slowMode ? 260 : 0);
       } catch (e) { fail(e); }
     };
     tick();
   }
   $("runBtn").onclick = () => start(false);
-  $("slowBtn").onclick = () => start(true);
+  $("slowBtn").onclick = () => { if (running) setSlow(!slowMode); else start(true); };
   $("haltBtn").onclick = () => {
     if (!running) return;
     stop(); vm.halted = true; vm.done = true; vm.exitCode = 130; finish();
