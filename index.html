@@ -448,6 +448,13 @@ footer a { color: inherit; }
   .g-table td { border: 0; padding: 0.12em 0; }
   .g-table td:first-child { font-weight: 600; }
   .g-table td code { white-space: normal; }
+  /* 뼈대 표: 모바일에서도 실제 줄과 문장 번호가 구분되게 이름표를 붙인다 */
+  .g-table.g-lines tr { display: grid; grid-template-columns: 3.6em 1fr; column-gap: 0.75em; row-gap: 0.3em; align-items: start; }
+  .g-table.g-lines td { width: auto; }
+  .g-table.g-lines td:first-child { grid-row: 1 / span 2; text-align: center; font-size: var(--text-base); font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1.2; background: var(--color-surface-2); border-radius: var(--radius-md); padding: 0.35em 0.2em; }
+  .g-table.g-lines td:first-child::before { content: "실제 줄"; display: block; font-size: var(--text-xs); font-weight: 500; color: var(--color-text-muted); }
+  .g-table.g-lines td:nth-child(3) { grid-column: 2; font-size: var(--text-xs); color: var(--color-text-muted); }
+  .g-table.g-lines td:nth-child(3)::before { content: "→ 문장 번호 "; font-weight: 600; color: var(--color-text); }
   .g-code ol { font-size: 13px; padding-left: 2.8em; }
 }
 .g-box a, .lead a { color: var(--color-primary); text-underline-offset: 2px; }
@@ -680,7 +687,7 @@ a.series-item:focus-visible{outline:3px solid #a5791c;outline-offset:3px}
       <p class="lead">원자(原子)는 도옹·ㅠ·동현·꽥꽥처럼 값 하나를 나타낸다. 원자를 붙여 쓰면 더하고, 띄어 쓰면 곱한다. 아래 순서대로 읽으면 동현랭의 모든 문법을 익힐 수 있다. 예제마다 '편집기에서 실행'을 누르면 플레이그라운드에서 바로 돌려 볼 수 있다.</p>
       <nav class="g-toc" aria-label="문법 목차"><a href="#g-frame"><span>1</span>뼈대</a><a href="#g-atom"><span>2</span>원자</a><a href="#g-expr"><span>3</span>식</a><a href="#g-var"><span>4</span>변수</a><a href="#g-io"><span>5</span>입출력</a><a href="#g-flow"><span>6</span>조건·이동</a><a href="#g-end"><span>7</span>끝내기</a><a href="#g-idiom"><span>8</span>관용구</a><a href="#g-err"><span>9</span>실수와 오류</a><a href="#g-quick"><span>10</span>한눈에 보기</a></nav>
       <div class="g-guide">
-<section class="g-box" id="g-frame"><h3><span class="g-num">1</span>프로그램의 뼈대</h3><p class="g-intro">모든 동현랭 프로그램은 같은 틀 안에 들어간다. 줄 번호를 세는 법을 알아 두면 신중동역(이동)을 쓸 때 헷갈리지 않는다.</p><ul class="g-rules"><li><b>첫 줄은 <code>나는 동현이냐?</code>, 마지막 줄은 <code>동현이구나</code></b> — 둘 중 하나라도 틀리면 실행하지 않는다.</li><li><b>한 줄에 문장 하나</b> — <code>~</code>로 나누면 한 줄에 여러 문장을 쓸 수 있다.</li><li><b><code>ㅋㅋ</code> 뒤는 주석</b> — 줄 끝까지 무시한다. 설명을 적어 두는 자리다.</li><li><b>줄 번호 = 문장 번호</b> — <code>나는 동현이냐?</code>가 1번이다. <code>~</code>로 나눈 문장, 빈 줄, 주석만 있는 줄도 번호를 하나씩 차지한다. 첫 줄 앞의 빈 줄만 세지 않는다.</li></ul><div class="g-table-wrap"><table class="g-table "><thead><tr><th>실제 줄</th><th>내용</th><th>문장 번호</th></tr></thead><tbody><tr><td>1</td><td><code>나는 동현이냐?</code></td><td>1</td></tr><tr><td>2</td><td><code>ㅋㅋ 3을 출력하고 끝낸다</code></td><td>2 (주석만 있어도 센다)</td></tr><tr><td>3</td><td><span class="g-empty">(빈 줄)</span></td><td>3</td></tr><tr><td>4</td><td><code>동현아 도오오옹 ~ 뿡뿡 동현</code></td><td>4, 5 (~로 나눈 두 문장)</td></tr><tr><td>5</td><td><code>동현이구나</code></td><td>6</td></tr></tbody></table></div><figure class="g-snip">
+<section class="g-box" id="g-frame"><h3><span class="g-num">1</span>프로그램의 뼈대</h3><p class="g-intro">모든 동현랭 프로그램은 같은 틀 안에 들어간다. 줄 번호를 세는 법을 알아 두면 신중동역(이동)을 쓸 때 헷갈리지 않는다.</p><ul class="g-rules"><li><b>첫 줄은 <code>나는 동현이냐?</code>, 마지막 줄은 <code>동현이구나</code></b> — 둘 중 하나라도 틀리면 실행하지 않는다.</li><li><b>한 줄에 문장 하나</b> — <code>~</code>로 나누면 한 줄에 여러 문장을 쓸 수 있다.</li><li><b><code>ㅋㅋ</code> 뒤는 주석</b> — 줄 끝까지 무시한다. 설명을 적어 두는 자리다.</li><li><b>줄 번호 = 문장 번호</b> — <code>나는 동현이냐?</code>가 1번이다. <code>~</code>로 나눈 문장, 빈 줄, 주석만 있는 줄도 번호를 하나씩 차지한다. 첫 줄 앞의 빈 줄만 세지 않는다.</li></ul><div class="g-table-wrap"><table class="g-table g-lines"><thead><tr><th>실제 줄</th><th>내용</th><th>문장 번호</th></tr></thead><tbody><tr><td>1</td><td><code>나는 동현이냐?</code></td><td>1</td></tr><tr><td>2</td><td><code>ㅋㅋ 3을 출력하고 끝낸다</code></td><td>2 (주석만 있어도 센다)</td></tr><tr><td>3</td><td><span class="g-empty">(빈 줄)</span></td><td>3</td></tr><tr><td>4</td><td><code>동현아 도오오옹 ~ 뿡뿡 동현</code></td><td>4, 5 (~로 나눈 두 문장)</td></tr><tr><td>5</td><td><code>동현이구나</code></td><td>6</td></tr></tbody></table></div><figure class="g-snip">
   <figcaption><span>뼈대와 줄 번호</span><button type="button" class="btn g-try" data-code="나는 동현이냐?
    ㅋㅋ 3을 출력하고 끝낸다
 
