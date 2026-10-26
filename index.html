@@ -682,69 +682,69 @@ a.series-item:focus-visible{outline:3px solid #a5791c;outline-offset:3px}
       <div class="g-guide">
 <section class="g-box" id="g-frame"><h3><span class="g-num">1</span>프로그램의 뼈대</h3><p class="g-intro">모든 동현랭 프로그램은 같은 틀 안에 들어간다. 줄 번호를 세는 법을 알아 두면 신중동역(이동)을 쓸 때 헷갈리지 않는다.</p><ul class="g-rules"><li><b>첫 줄은 <code>나는 동현이냐?</code>, 마지막 줄은 <code>동현이구나</code></b> — 둘 중 하나라도 틀리면 실행하지 않는다.</li><li><b>한 줄에 문장 하나</b> — <code>~</code>로 나누면 한 줄에 여러 문장을 쓸 수 있다.</li><li><b><code>ㅋㅋ</code> 뒤는 주석</b> — 줄 끝까지 무시한다. 설명을 적어 두는 자리다.</li><li><b>줄 번호 = 문장 번호</b> — <code>나는 동현이냐?</code>가 1번이다. <code>~</code>로 나눈 문장, 빈 줄, 주석만 있는 줄도 번호를 하나씩 차지한다. 첫 줄 앞의 빈 줄만 세지 않는다.</li></ul><div class="g-table-wrap"><table class="g-table "><thead><tr><th>실제 줄</th><th>내용</th><th>문장 번호</th></tr></thead><tbody><tr><td>1</td><td><code>나는 동현이냐?</code></td><td>1</td></tr><tr><td>2</td><td><code>ㅋㅋ 3을 출력하고 끝낸다</code></td><td>2 (주석만 있어도 센다)</td></tr><tr><td>3</td><td><span class="g-empty">(빈 줄)</span></td><td>3</td></tr><tr><td>4</td><td><code>동현아 도오오옹 ~ 뿡뿡 동현</code></td><td>4, 5 (~로 나눈 두 문장)</td></tr><tr><td>5</td><td><code>동현이구나</code></td><td>6</td></tr></tbody></table></div><figure class="g-snip">
   <figcaption><span>뼈대와 줄 번호</span><button type="button" class="btn g-try" data-code="나는 동현이냐?
-ㅋㅋ 3을 출력하고 끝낸다
+   ㅋㅋ 3을 출력하고 끝낸다
 
-동현아 도오오옹 ~ 뿡뿡 동현
+  동현아 도오오옹 ~ 뿡뿡 동현
 동현이구나" data-input="">편집기에서 실행</button></figcaption>
-  <div class="g-code"><ol><li><code data-dh=""><span class="t-frame">나는 동현이냐?</span></code></li><li><code data-dh=""><span class="t-cmt">ㅋㅋ 3을 출력하고 끝낸다</span></code></li><li><code data-dh=""></code></li><li><code data-dh=""><span class="t-assign">동현아</span> <span class="t-num">도오오옹</span> ~ <span class="t-out">뿡뿡</span> <span class="t-var">동현</span></code></li><li><code data-dh=""><span class="t-frame">동현이구나</span></code></li></ol></div>
+  <div class="g-code"><ol><li><code data-dh=""><span class="t-frame">나는 동현이냐?</span></code></li><li><code data-dh="">   <span class="t-cmt">ㅋㅋ 3을 출력하고 끝낸다</span></code></li><li><code data-dh=""></code></li><li><code data-dh="">  <span class="t-assign">동현아</span> <span class="t-num">도오오옹</span> ~ <span class="t-out">뿡뿡</span> <span class="t-var">동현</span></code></li><li><code data-dh=""><span class="t-frame">동현이구나</span></code></li></ol></div>
   <div class="g-out"><div class="g-out-h">뿡뿡 출력 <span>정상 종료 · 종료 코드 0</span></div><pre>3</pre></div>
   
 </figure></section>
 <section class="g-box" id="g-atom"><h3><span class="g-num">2</span>원자(atom)란?</h3><p class="g-intro">식을 이루는 가장 작은 값 하나다. 동현랭의 원자는 네 가지다.</p><div class="g-table-wrap"><table class="g-table g-atoms"><thead><tr><th>원자</th><th>값</th><th>예</th></tr></thead><tbody><tr><td><code>도(오…)옹</code></td><td>오의 개수 + 1</td><td><code>도옹</code> = 1, <code>도오오옹</code> = 3</td></tr><tr><td><code>ㅠ</code></td><td>−1</td><td><code>동현ㅠ</code> = 동현 − 1</td></tr><tr><td><code>동…현</code></td><td>그 번호의 변수 값 (동의 개수가 번호)</td><td><code>동동현</code> = 2번 변수</td></tr><tr><td><code>꽥꽥</code></td><td>입력에서 읽은 정수 하나</td><td><code>동현아 꽥꽥</code></td></tr></tbody></table></div><ul class="g-rules"><li><b>붙여 쓰면 더한다</b> — <code>도오옹도옹</code> = 2 + 1 = 3, <code>동현ㅠ</code> = 동현 − 1</li><li><b>띄어 쓰면 곱한다</b> — <code>도오옹 도오오옹</code> = <span class="nw">2 × 3 = 6</span></li><li><b>붙인 덩어리를 먼저 더하고, 덩어리끼리 곱한다</b> — <code>도오옹도옹 도오옹</code> = <span class="nw">(2 + 1) × 2 = 6</span></li><li><b>뚱띠·또치는 원자가 아니다</b> — 덩어리 사이에 넣는 나눗셈 기호다. <code>도오오오오오오옹 뚱띠 도오옹</code> = <span class="nw">7 ÷ 2의 몫 3</span></li></ul></section>
 <section class="g-box" id="g-expr"><h3><span class="g-num">3</span>식의 계산 순서</h3><p class="g-intro">식은 두 단계로 계산한다. 덧셈은 붙인 덩어리 안에서만 일어나고, 덩어리 사이는 곱셈·나눗셈이다. 괄호가 없으니 이 순서가 괄호 역할을 한다.</p><ol class="g-steps"><li><b>1단계 — 덩어리 만들기</b> 붙어 있는 원자를 모두 더해 덩어리(항) 하나로 만든다.</li><li><b>2단계 — 덩어리 잇기</b> 덩어리를 <b>왼쪽부터 차례로</b> 곱한다. 중간에 <code>뚱띠</code>가 있으면 나누고(몫), <code>또치</code>가 있으면 나머지를 낸다.</li></ol><div class="g-table-wrap"><table class="g-table "><thead><tr><th>식</th><th>계산</th><th>값</th></tr></thead><tbody><tr><td><code>도오옹도옹 도오옹</code></td><td>(2 + 1) × 2</td><td><b>6</b></td></tr><tr><td><code>ㅠ 도오오옹</code></td><td>(−1) × 3 — 음수 만들기</td><td><b>-3</b></td></tr><tr><td><code>도오오옹ㅠ 도오옹</code></td><td>(3 − 1) × 2</td><td><b>4</b></td></tr><tr><td><code>도오오오오오오옹 뚱띠 도오옹</code></td><td>7 ÷ 2의 몫</td><td><b>3</b></td></tr><tr><td><code>도오오오오오오옹 또치 도오옹</code></td><td>7 ÷ 2의 나머지</td><td><b>1</b></td></tr><tr><td><code>ㅠ 도오오오오오오옹 뚱띠 도오옹</code></td><td>−7 ÷ 2 → 0 쪽으로 버려 −3</td><td><b>-3</b></td></tr><tr><td><code>도오옹 도오오옹 뚱띠 도오오오옹</code></td><td>(2 × 3) ÷ 4 → 1</td><td><b>1</b></td></tr><tr><td><code>도오옹 뚱띠 도오오오옹 도오오옹</code></td><td>(2 ÷ 4) × 3 → 0 × 3 = 0</td><td><b>0</b></td></tr><tr><td><code>도오오오오오오오오오옹 도오오오오오오오오오옹</code></td><td>10 × 10 — 큰 수는 곱으로</td><td><b>100</b></td></tr><tr><td><span class="g-empty">(빈 식)</span></td><td>빈 식은 0</td><td><b>0</b></td></tr></tbody></table></div><ul class="g-rules"><li><b>순서가 결과를 바꾼다</b> — 위 표의 7·8번째 줄처럼 같은 수라도 나누는 위치에 따라 1과 0으로 갈린다. 나눗셈은 되도록 마지막에 두라.</li><li><b>몫은 0 쪽으로 버린다</b> — C·자바스크립트와 같다. −7 뚱띠 2 = −3, −7 또치 2 = −1.</li><li><b>곱 두 개를 더하려면 변수에 나눠 담는다</b> — 3×4 + 5×6 같은 '곱의 합'은 한 식에 쓸 수 없다. 곱을 각각 변수에 담은 뒤 붙여 쓰면 더해진다(아래 예제).</li><li><b>큰 수는 곱으로, 소수(素數)는 곱 + 덧셈 두 줄로</b> — 97은 곱으로 안 되니 <code>동현아 도오오오오오오오옹 도오오오오오오오오오오오옹</code>(8 × 12 = 96) 다음 줄에 <code>동현아 동현도옹</code>(+1). <a href="#encoder">코드 생성기</a>가 이 일을 대신 해 준다.</li><li><b>수의 범위</b> — ±9,007,199,254,740,991(약 ±9007조)까지. 넘으면 오류가 난다.</li></ul><figure class="g-snip">
   <figcaption><span>3×4 + 5×6 = 42 계산하기</span><button type="button" class="btn g-try" data-code="나는 동현이냐?
-동현아 도오오옹 도오오오옹   ㅋㅋ 동현 = 3 × 4 = 12
-동동현아 도오오오오옹 도오오오오오옹   ㅋㅋ 동동현 = 5 × 6 = 30
-뿡뿡 동현동동현   ㅋㅋ 붙여 쓰면 덧셈: 12 + 30
+  동현아 도오오옹 도오오오옹   ㅋㅋ 동현 = 3 × 4 = 12
+  동동현아 도오오오오옹 도오오오오오옹   ㅋㅋ 동동현 = 5 × 6 = 30
+  뿡뿡 동현동동현   ㅋㅋ 붙여 쓰면 덧셈: 12 + 30
 동현이구나" data-input="">편집기에서 실행</button></figcaption>
-  <div class="g-code"><ol><li><code data-dh=""><span class="t-frame">나는 동현이냐?</span></code></li><li><code data-dh=""><span class="t-assign">동현아</span> <span class="t-num">도오오옹</span> <span class="t-num">도오오오옹</span>   <span class="t-cmt">ㅋㅋ 동현 = 3 × 4 = 12</span></code></li><li><code data-dh=""><span class="t-assign">동동현아</span> <span class="t-num">도오오오오옹</span> <span class="t-num">도오오오오오옹</span>   <span class="t-cmt">ㅋㅋ 동동현 = 5 × 6 = 30</span></code></li><li><code data-dh=""><span class="t-out">뿡뿡</span> <span class="t-var">동현</span><span class="t-var">동동현</span>   <span class="t-cmt">ㅋㅋ 붙여 쓰면 덧셈: 12 + 30</span></code></li><li><code data-dh=""><span class="t-frame">동현이구나</span></code></li></ol></div>
+  <div class="g-code"><ol><li><code data-dh=""><span class="t-frame">나는 동현이냐?</span></code></li><li><code data-dh="">  <span class="t-assign">동현아</span> <span class="t-num">도오오옹</span> <span class="t-num">도오오오옹</span>   <span class="t-cmt">ㅋㅋ 동현 = 3 × 4 = 12</span></code></li><li><code data-dh="">  <span class="t-assign">동동현아</span> <span class="t-num">도오오오오옹</span> <span class="t-num">도오오오오오옹</span>   <span class="t-cmt">ㅋㅋ 동동현 = 5 × 6 = 30</span></code></li><li><code data-dh="">  <span class="t-out">뿡뿡</span> <span class="t-var">동현</span><span class="t-var">동동현</span>   <span class="t-cmt">ㅋㅋ 붙여 쓰면 덧셈: 12 + 30</span></code></li><li><code data-dh=""><span class="t-frame">동현이구나</span></code></li></ol></div>
   <div class="g-out"><div class="g-out-h">뿡뿡 출력 <span>정상 종료 · 종료 코드 0</span></div><pre>42</pre></div>
   
 </figure></section>
 <section class="g-box" id="g-var"><h3><span class="g-num">4</span>변수와 대입</h3><p class="g-intro">변수는 이름 대신 번호로 부른다. <code>동</code>의 개수가 번호다. <code>동현</code>은 1번, <code>동동현</code>은 2번, <code>동동동현</code>은 3번 변수다.</p><ul class="g-rules"><li><b>대입은 <code>동…현아 &lt;식&gt;</code></b> — 변수 이름에 <code>아</code>를 붙여 부르면서 값을 준다. <code>동현아 도오오옹</code> → 동현 = 3</li><li><b>처음 값은 모두 0</b> — 대입하지 않은 변수를 써도 오류가 아니라 0이다.</li><li><b>오른쪽을 먼저 계산한다</b> — <code>동현아 동현도옹</code>은 지금 동현에 1을 더해 다시 동현에 넣는다. 반복문의 카운터가 이렇게 움직인다.</li><li><b>개수 제한이 없다</b> — 동을 열 번 쓰면 10번 변수다. 플레이그라운드의 '동현이들 (변수)' 칸에서 값을 바로 볼 수 있다.</li></ul><div class="g-table-wrap"><table class="g-table "><thead><tr><th>하고 싶은 것</th><th>동현랭</th></tr></thead><tbody><tr><td>1 더하기</td><td><code>동현아 동현도옹</code></td></tr><tr><td>1 빼기</td><td><code>동현아 동현ㅠ</code></td></tr><tr><td>2배</td><td><code>동현아 동현 도오옹</code></td></tr><tr><td>부호 바꾸기</td><td><code>동현아 동현 ㅠ</code></td></tr><tr><td>복사</td><td><code>동동현아 동현</code></td></tr><tr><td>두 변수 더하기</td><td><code>동동동현아 동현동동현</code></td></tr><tr><td>0으로 지우기</td><td><code>동현아</code></td></tr><tr><td>반으로 (몫)</td><td><code>동현아 동현 뚱띠 도오옹</code></td></tr></tbody></table></div><figure class="g-snip">
   <figcaption><span>두 변수의 값 바꾸기 (임시 변수 사용)</span><button type="button" class="btn g-try" data-code="나는 동현이냐?
-동현아 도오오옹   ㅋㅋ 동현 = 3
-동동현아 도오오오오오오옹   ㅋㅋ 동동현 = 7
-동동동현아 동현   ㅋㅋ 임시로 3번에 복사
-동현아 동동현
-동동현아 동동동현
-뿡뿡 동현 ~ 뿡뿡뿡 도오옹 도오오오옹 도오오오옹 ~ 뿡뿡 동동현
+  동현아 도오오옹   ㅋㅋ 동현 = 3
+  동동현아 도오오오오오오옹   ㅋㅋ 동동현 = 7
+  동동동현아 동현   ㅋㅋ 임시로 3번에 복사
+  동현아 동동현
+  동동현아 동동동현
+  뿡뿡 동현 ~ 뿡뿡뿡 도오옹 도오오오옹 도오오오옹 ~ 뿡뿡 동동현
 동현이구나" data-input="">편집기에서 실행</button></figcaption>
-  <div class="g-code"><ol><li><code data-dh=""><span class="t-frame">나는 동현이냐?</span></code></li><li><code data-dh=""><span class="t-assign">동현아</span> <span class="t-num">도오오옹</span>   <span class="t-cmt">ㅋㅋ 동현 = 3</span></code></li><li><code data-dh=""><span class="t-assign">동동현아</span> <span class="t-num">도오오오오오오옹</span>   <span class="t-cmt">ㅋㅋ 동동현 = 7</span></code></li><li><code data-dh=""><span class="t-assign">동동동현아</span> <span class="t-var">동현</span>   <span class="t-cmt">ㅋㅋ 임시로 3번에 복사</span></code></li><li><code data-dh=""><span class="t-assign">동현아</span> <span class="t-var">동동현</span></code></li><li><code data-dh=""><span class="t-assign">동동현아</span> <span class="t-var">동동동현</span></code></li><li><code data-dh=""><span class="t-out">뿡뿡</span> <span class="t-var">동현</span> ~ <span class="t-out">뿡뿡뿡</span> <span class="t-num">도오옹</span> <span class="t-num">도오오오옹</span> <span class="t-num">도오오오옹</span> ~ <span class="t-out">뿡뿡</span> <span class="t-var">동동현</span></code></li><li><code data-dh=""><span class="t-frame">동현이구나</span></code></li></ol></div>
+  <div class="g-code"><ol><li><code data-dh=""><span class="t-frame">나는 동현이냐?</span></code></li><li><code data-dh="">  <span class="t-assign">동현아</span> <span class="t-num">도오오옹</span>   <span class="t-cmt">ㅋㅋ 동현 = 3</span></code></li><li><code data-dh="">  <span class="t-assign">동동현아</span> <span class="t-num">도오오오오오오옹</span>   <span class="t-cmt">ㅋㅋ 동동현 = 7</span></code></li><li><code data-dh="">  <span class="t-assign">동동동현아</span> <span class="t-var">동현</span>   <span class="t-cmt">ㅋㅋ 임시로 3번에 복사</span></code></li><li><code data-dh="">  <span class="t-assign">동현아</span> <span class="t-var">동동현</span></code></li><li><code data-dh="">  <span class="t-assign">동동현아</span> <span class="t-var">동동동현</span></code></li><li><code data-dh="">  <span class="t-out">뿡뿡</span> <span class="t-var">동현</span> ~ <span class="t-out">뿡뿡뿡</span> <span class="t-num">도오옹</span> <span class="t-num">도오오오옹</span> <span class="t-num">도오오오옹</span> ~ <span class="t-out">뿡뿡</span> <span class="t-var">동동현</span></code></li><li><code data-dh=""><span class="t-frame">동현이구나</span></code></li></ol></div>
   <div class="g-out"><div class="g-out-h">뿡뿡 출력 <span>정상 종료 · 종료 코드 0</span></div><pre>7 3</pre></div>
   
 </figure></section>
 <section class="g-box" id="g-io"><h3><span class="g-num">5</span>입력과 출력</h3><p class="g-intro">입력은 꽥꽥 한 가지, 출력은 네 가지다. 출력 명령은 자동으로 띄어쓰기나 줄바꿈을 넣지 않는다.</p><h4>입력 — 꽥꽥</h4><ul class="g-rules"><li><b>식 안에 쓰는 원자다</b> — 계산될 때마다 입력 칸에서 정수를 하나씩 꺼낸다. <code>동현아 꽥꽥</code></li><li><b>공백·줄바꿈으로 구분한다</b> — 입력 칸에 <code>12 34</code>를 넣으면 첫 꽥꽥은 12, 다음은 34다.</li><li><b>다 쓰면 0</b> — 더 꺼낼 수가 없으면 오류 대신 0을 준다. "0이 나오면 끝" 같은 반복에 쓴다.</li><li><b>한 식에 여러 번 쓸 수 있다</b> — <code>꽥꽥꽥꽥</code>는 두 입력의 합, <code>꽥꽥 꽥꽥</code>는 두 입력의 곱이다.</li><li><b>정수만 받는다</b> — <code>3.5</code>나 <code>abc</code>를 넣으면 오류가 난다. 소수는 1000배 해서 넣는다.</li></ul><h4>출력 — 뿡뿡 · 뿡뿡뿡 · 포동이</h4><div class="g-table-wrap"><table class="g-table "><thead><tr><th>명령</th><th>하는 일</th><th>예</th><th>출력</th></tr></thead><tbody><tr><td><code>뿡뿡 &lt;식&gt;</code></td><td>정수로 출력</td><td><code>뿡뿡 도오옹 도오오옹</code></td><td>6</td></tr><tr><td><code>뿡뿡뿡 &lt;식&gt;</code></td><td>그 번호의 유니코드 문자 출력</td><td><code>뿡뿡뿡 도오오옹 도오오오옹 도오오오오오옹</code></td><td>H</td></tr><tr><td><code>뿡뿡뿡</code></td><td>식 없이 쓰면 줄바꿈</td><td><code>뿡뿡뿡</code></td><td>↵</td></tr><tr><td><code>포동이 &lt;식&gt;</code></td><td>1000으로 나눠 소수 셋째 자리까지 (v1.2)</td><td><code>포동이 도오오옹 도오오오옹 도오오오오옹</code></td><td>0.072</td></tr></tbody></table></div><h4>자주 쓰는 문자 코드</h4><p class="g-intro">아래 식을 <code>뿡뿡뿡</code> 뒤에 그대로 쓰면 된다. 한글처럼 곱으로 안 되는 글자는 <a href="#encoder">코드 생성기</a>가 만들어 준다.</p><div class="g-table-wrap"><table class="g-table g-chars"><thead><tr><th>문자</th><th>코드</th><th>식</th></tr></thead><tbody><tr><td><b>␣</b> <span class="g-dim">공백</span></td><td>32</td><td><code>도오옹 도오오오옹 도오오오옹</code></td></tr><tr><td><b>!</b> <span class="g-dim">느낌표</span></td><td>33</td><td><code>도오오옹 도오오오오오오오오오오옹</code></td></tr><tr><td><b>,</b> <span class="g-dim">쉼표</span></td><td>44</td><td><code>도오오오옹 도오오오오오오오오오오옹</code></td></tr><tr><td><b>.</b> <span class="g-dim">마침표</span></td><td>46</td><td><code>도오옹 도오오오오오오오오오오오옹도오오오오오오오오오오옹</code></td></tr><tr><td><b>0</b> <span class="g-dim">숫자 0</span></td><td>48</td><td><code>도오오옹 도오오오옹 도오오오옹</code></td></tr><tr><td><b>?</b> <span class="g-dim">물음표</span></td><td>63</td><td><code>도오오옹 도오오옹 도오오오오오오옹</code></td></tr><tr><td><b>A</b> <span class="g-dim">대문자 A</span></td><td>65</td><td><code>도오오오오옹 도오오오오오오오오오오오옹도옹</code></td></tr><tr><td><b>H</b> <span class="g-dim">대문자 H</span></td><td>72</td><td><code>도오오옹 도오오오옹 도오오오오오옹</code></td></tr><tr><td><b>i</b> <span class="g-dim">소문자 i</span></td><td>105</td><td><code>도오오옹 도오오오오옹 도오오오오오오옹</code></td></tr></tbody></table></div><figure class="g-snip">
   <figcaption><span>두 수를 받아 합 출력하기</span><button type="button" class="btn g-try" data-code="나는 동현이냐?
-동현아 꽥꽥꽥꽥   ㅋㅋ 두 입력의 합
-뿡뿡뿡 도오오옹 도오오오옹 도오오오오오옹   ㅋㅋ H
-뿡뿡뿡 도오오옹 도오오오오옹 도오오오오오오옹   ㅋㅋ i
-뿡뿡뿡 도오오옹 도오오오오오오오오오오옹   ㅋㅋ !
-뿡뿡뿡 도오옹 도오오오옹 도오오오옹   ㅋㅋ 공백
-뿡뿡 동현
-뿡뿡뿡   ㅋㅋ 줄바꿈
+  동현아 꽥꽥꽥꽥   ㅋㅋ 두 입력의 합
+  뿡뿡뿡 도오오옹 도오오오옹 도오오오오오옹   ㅋㅋ H
+  뿡뿡뿡 도오오옹 도오오오오옹 도오오오오오오옹   ㅋㅋ i
+  뿡뿡뿡 도오오옹 도오오오오오오오오오오옹   ㅋㅋ !
+  뿡뿡뿡 도오옹 도오오오옹 도오오오옹   ㅋㅋ 공백
+  뿡뿡 동현
+  뿡뿡뿡   ㅋㅋ 줄바꿈
 동현이구나" data-input="12 30">편집기에서 실행</button></figcaption>
-  <div class="g-code"><ol><li><code data-dh=""><span class="t-frame">나는 동현이냐?</span></code></li><li><code data-dh=""><span class="t-assign">동현아</span> <span class="t-in">꽥꽥</span><span class="t-in">꽥꽥</span>   <span class="t-cmt">ㅋㅋ 두 입력의 합</span></code></li><li><code data-dh=""><span class="t-out">뿡뿡뿡</span> <span class="t-num">도오오옹</span> <span class="t-num">도오오오옹</span> <span class="t-num">도오오오오오옹</span>   <span class="t-cmt">ㅋㅋ H</span></code></li><li><code data-dh=""><span class="t-out">뿡뿡뿡</span> <span class="t-num">도오오옹</span> <span class="t-num">도오오오오옹</span> <span class="t-num">도오오오오오오옹</span>   <span class="t-cmt">ㅋㅋ i</span></code></li><li><code data-dh=""><span class="t-out">뿡뿡뿡</span> <span class="t-num">도오오옹</span> <span class="t-num">도오오오오오오오오오오옹</span>   <span class="t-cmt">ㅋㅋ !</span></code></li><li><code data-dh=""><span class="t-out">뿡뿡뿡</span> <span class="t-num">도오옹</span> <span class="t-num">도오오오옹</span> <span class="t-num">도오오오옹</span>   <span class="t-cmt">ㅋㅋ 공백</span></code></li><li><code data-dh=""><span class="t-out">뿡뿡</span> <span class="t-var">동현</span></code></li><li><code data-dh=""><span class="t-out">뿡뿡뿡</span>   <span class="t-cmt">ㅋㅋ 줄바꿈</span></code></li><li><code data-dh=""><span class="t-frame">동현이구나</span></code></li></ol></div>
+  <div class="g-code"><ol><li><code data-dh=""><span class="t-frame">나는 동현이냐?</span></code></li><li><code data-dh="">  <span class="t-assign">동현아</span> <span class="t-in">꽥꽥</span><span class="t-in">꽥꽥</span>   <span class="t-cmt">ㅋㅋ 두 입력의 합</span></code></li><li><code data-dh="">  <span class="t-out">뿡뿡뿡</span> <span class="t-num">도오오옹</span> <span class="t-num">도오오오옹</span> <span class="t-num">도오오오오오옹</span>   <span class="t-cmt">ㅋㅋ H</span></code></li><li><code data-dh="">  <span class="t-out">뿡뿡뿡</span> <span class="t-num">도오오옹</span> <span class="t-num">도오오오오옹</span> <span class="t-num">도오오오오오오옹</span>   <span class="t-cmt">ㅋㅋ i</span></code></li><li><code data-dh="">  <span class="t-out">뿡뿡뿡</span> <span class="t-num">도오오옹</span> <span class="t-num">도오오오오오오오오오오옹</span>   <span class="t-cmt">ㅋㅋ !</span></code></li><li><code data-dh="">  <span class="t-out">뿡뿡뿡</span> <span class="t-num">도오옹</span> <span class="t-num">도오오오옹</span> <span class="t-num">도오오오옹</span>   <span class="t-cmt">ㅋㅋ 공백</span></code></li><li><code data-dh="">  <span class="t-out">뿡뿡</span> <span class="t-var">동현</span></code></li><li><code data-dh="">  <span class="t-out">뿡뿡뿡</span>   <span class="t-cmt">ㅋㅋ 줄바꿈</span></code></li><li><code data-dh=""><span class="t-frame">동현이구나</span></code></li></ol></div>
   <div class="g-out"><div class="g-out-h">꽥꽥 입력 <b>12 30</b> · 뿡뿡 출력 <span>정상 종료 · 종료 코드 0</span></div><pre>Hi! 42
 </pre></div>
   
 </figure></section>
 <section class="g-box" id="g-flow"><h3><span class="g-num">6</span>조건과 이동</h3><p class="g-intro">동현랭에는 if·for·while이 없다. 대신 "조건이 맞으면 한 문장 실행"과 "몇 번 줄로 이동" 두 가지를 조합해 모든 흐름을 만든다.</p><div class="g-table-wrap"><table class="g-table "><thead><tr><th>명령</th><th>언제 실행하나</th><th>예</th></tr></thead><tbody><tr><td><code>신중동 &lt;식&gt;? &lt;명령&gt;</code></td><td>식이 <b>0</b>일 때만 명령을 실행</td><td><code>신중동 동현? 뿡뿡 도옹</code></td></tr><tr><td><code>뭉치 &lt;식&gt;? &lt;명령&gt;</code></td><td>식이 <b>음수</b>일 때만 명령을 실행 (v1.2)</td><td><code>뭉치 동현? 뿡뿡 도옹</code></td></tr><tr><td><code>신중동역 &lt;식&gt;</code></td><td>식 값 번호의 문장으로 이동</td><td><code>신중동역 도오오오옹</code></td></tr></tbody></table></div><ul class="g-rules"><li><b><code>?</code> 뒤에는 문장 하나</b> — 출력, 대입, 이동, 오겡끼데스까, 심지어 또 다른 신중동도 올 수 있다.</li><li><b>조건이 틀리면 다음 줄로</b> — 실행하지 않고 그냥 지나간다.</li><li><b>이동할 곳은 문장 번호</b> — 1번 틀(뼈대)에서 센 번호다. 번호도 식이라 <code>도오옹 도오오옹</code>(6)처럼 곱으로 쓸 수 있다.</li></ul><h4>비교하는 법</h4><p class="g-intro">뺄셈 기호가 없으니 b에 −1을 곱해 두고(<code>동동동현아 동동현 ㅠ</code>) a와 붙여 쓰면 a − b가 된다. 이 값이 0인지, 음수인지로 모든 비교를 한다. 아래에서 a = <code>동현</code>, b = <code>동동현</code>, −b = <code>동동동현</code>이다.</p><div class="g-table-wrap"><table class="g-table "><thead><tr><th>비교</th><th>동현랭</th><th>원리</th></tr></thead><tbody><tr><td>a = b</td><td><code>신중동 동현동동동현? …</code></td><td>a − b = 0</td></tr><tr><td>a &lt; b</td><td><code>뭉치 동현동동동현? …</code></td><td>a − b &lt; 0</td></tr><tr><td>a ≤ b</td><td><code>뭉치 동현동동동현ㅠ? …</code></td><td>a − b − 1 &lt; 0</td></tr><tr><td>a &gt; b</td><td><code>뭉치 동동현동동동동현? …</code></td><td>b − a &lt; 0 (−a를 4번 변수에)</td></tr><tr><td>a가 짝수</td><td><code>신중동 동현 또치 도오옹? …</code></td><td>a ÷ 2의 나머지 = 0</td></tr><tr><td>a ≠ b</td><td>같을 때 건너뛰기</td><td>아래 '만약…아니면' 틀 참고</td></tr><tr><td>A 그리고 B</td><td><code>신중동 A? 신중동 B? …</code></td><td>조건을 겹쳐 쓴다</td></tr><tr><td>A 또는 B</td><td>두 줄로</td><td><code>신중동 A? 신중동역 n</code> 다음 줄에 <code>신중동 B? 신중동역 n</code></td></tr></tbody></table></div><h4>흐름의 기본 틀</h4><div class="g-table-wrap"><table class="g-table "><thead><tr><th>만들고 싶은 것</th><th>동현랭 틀</th></tr></thead><tbody><tr><td>만약 조건이면 A, 아니면 B</td><td><ol class="g-mini"><li><code>신중동 &lt;조건&gt;? 신중동역 &lt;A 줄&gt;</code></li><li>B 문장들 …</li><li><code>신중동역 &lt;끝 줄&gt;</code></li><li>A 문장들 … (A 줄)</li><li>(끝 줄) 다음 할 일</li></ol></td></tr><tr><td>n번 반복</td><td><ol class="g-mini"><li><code>동현아 &lt;n&gt;</code></li><li>(시작 줄) <code>신중동 동현? 신중동역 &lt;끝 줄&gt;</code></li><li>반복할 문장들 …</li><li><code>동현아 동현ㅠ</code></li><li><code>신중동역 &lt;시작 줄&gt;</code></li><li>(끝 줄) 다음 할 일</li></ol></td></tr><tr><td>입력이 0일 때까지 반복</td><td><ol class="g-mini"><li>(시작 줄) <code>동현아 꽥꽥</code></li><li><code>신중동 동현? 신중동역 &lt;끝 줄&gt;</code></li><li>처리할 문장들 …</li><li><code>신중동역 &lt;시작 줄&gt;</code></li></ol></td></tr></tbody></table></div><figure class="g-snip">
   <figcaption><span>1부터 6까지 짝수엔 *, 홀수엔 - 붙이기 (반복 + 만약…아니면)</span><button type="button" class="btn g-try" data-code="나는 동현이냐?
-동현아 도옹   ㅋㅋ 2: i = 1
-뿡뿡 동현   ㅋㅋ 3: 반복 시작 — i 출력
-신중동 동현 또치 도오옹? 신중동역 도오오오오오오오옹   ㅋㅋ 4: 짝수면 8번 줄로
-뿡뿡뿡 도오옹 도오오오옹 도오오오옹   ㅋㅋ 5: (홀수) 공백
-뿡뿡뿡 도오오옹 도오오옹 도오오오오옹   ㅋㅋ 6: '-' (3 × 3 × 5 = 45)
-신중동역 도오오오오오오오오오옹   ㅋㅋ 7: 짝수 칸을 건너뛰어 10번 줄로
-뿡뿡뿡 도오옹 도오오오옹 도오오오옹   ㅋㅋ 8: (짝수) 공백
-뿡뿡뿡 도오오오오오옹 도오오오오오오옹   ㅋㅋ 9: '*' (6 × 7 = 42)
-뿡뿡뿡   ㅋㅋ 10: 줄바꿈
-신중동 동현ㅠㅠㅠㅠㅠㅠ? 오겡끼데스까   ㅋㅋ 11: i − 6 = 0이면 끝
-동현아 동현도옹   ㅋㅋ 12: i + 1
-신중동역 도오오옹   ㅋㅋ 13: 3번 줄로 돌아간다
+  동현아 도옹   ㅋㅋ 2: i = 1
+  뿡뿡 동현   ㅋㅋ 3: 반복 시작 — i 출력
+  신중동 동현 또치 도오옹? 신중동역 도오오오오오오오옹   ㅋㅋ 4: 짝수면 8번 줄로
+  뿡뿡뿡 도오옹 도오오오옹 도오오오옹   ㅋㅋ 5: (홀수) 공백
+  뿡뿡뿡 도오오옹 도오오옹 도오오오오옹   ㅋㅋ 6: '-' (3 × 3 × 5 = 45)
+  신중동역 도오오오오오오오오오옹   ㅋㅋ 7: 짝수 칸을 건너뛰어 10번 줄로
+  뿡뿡뿡 도오옹 도오오오옹 도오오오옹   ㅋㅋ 8: (짝수) 공백
+  뿡뿡뿡 도오오오오오옹 도오오오오오오옹   ㅋㅋ 9: '*' (6 × 7 = 42)
+  뿡뿡뿡   ㅋㅋ 10: 줄바꿈
+  신중동 동현ㅠㅠㅠㅠㅠㅠ? 오겡끼데스까   ㅋㅋ 11: i − 6 = 0이면 끝
+  동현아 동현도옹   ㅋㅋ 12: i + 1
+  신중동역 도오오옹   ㅋㅋ 13: 3번 줄로 돌아간다
 동현이구나" data-input="">편집기에서 실행</button></figcaption>
-  <div class="g-code"><ol><li><code data-dh=""><span class="t-frame">나는 동현이냐?</span></code></li><li><code data-dh=""><span class="t-assign">동현아</span> <span class="t-num">도옹</span>   <span class="t-cmt">ㅋㅋ 2: i = 1</span></code></li><li><code data-dh=""><span class="t-out">뿡뿡</span> <span class="t-var">동현</span>   <span class="t-cmt">ㅋㅋ 3: 반복 시작 — i 출력</span></code></li><li><code data-dh=""><span class="t-ctl">신중동</span> <span class="t-var">동현</span> <span class="t-op">또치</span> <span class="t-num">도오옹</span>? <span class="t-ctl">신중동역</span> <span class="t-num">도오오오오오오오옹</span>   <span class="t-cmt">ㅋㅋ 4: 짝수면 8번 줄로</span></code></li><li><code data-dh=""><span class="t-out">뿡뿡뿡</span> <span class="t-num">도오옹</span> <span class="t-num">도오오오옹</span> <span class="t-num">도오오오옹</span>   <span class="t-cmt">ㅋㅋ 5: (홀수) 공백</span></code></li><li><code data-dh=""><span class="t-out">뿡뿡뿡</span> <span class="t-num">도오오옹</span> <span class="t-num">도오오옹</span> <span class="t-num">도오오오오옹</span>   <span class="t-cmt">ㅋㅋ 6: '-' (3 × 3 × 5 = 45)</span></code></li><li><code data-dh=""><span class="t-ctl">신중동역</span> <span class="t-num">도오오오오오오오오오옹</span>   <span class="t-cmt">ㅋㅋ 7: 짝수 칸을 건너뛰어 10번 줄로</span></code></li><li><code data-dh=""><span class="t-out">뿡뿡뿡</span> <span class="t-num">도오옹</span> <span class="t-num">도오오오옹</span> <span class="t-num">도오오오옹</span>   <span class="t-cmt">ㅋㅋ 8: (짝수) 공백</span></code></li><li><code data-dh=""><span class="t-out">뿡뿡뿡</span> <span class="t-num">도오오오오오옹</span> <span class="t-num">도오오오오오오옹</span>   <span class="t-cmt">ㅋㅋ 9: '*' (6 × 7 = 42)</span></code></li><li><code data-dh=""><span class="t-out">뿡뿡뿡</span>   <span class="t-cmt">ㅋㅋ 10: 줄바꿈</span></code></li><li><code data-dh=""><span class="t-ctl">신중동</span> <span class="t-var">동현</span><span class="t-minus">ㅠㅠㅠㅠㅠㅠ</span>? <span class="t-halt">오겡끼데스까</span>   <span class="t-cmt">ㅋㅋ 11: i − 6 = 0이면 끝</span></code></li><li><code data-dh=""><span class="t-assign">동현아</span> <span class="t-var">동현</span><span class="t-num">도옹</span>   <span class="t-cmt">ㅋㅋ 12: i + 1</span></code></li><li><code data-dh=""><span class="t-ctl">신중동역</span> <span class="t-num">도오오옹</span>   <span class="t-cmt">ㅋㅋ 13: 3번 줄로 돌아간다</span></code></li><li><code data-dh=""><span class="t-frame">동현이구나</span></code></li></ol></div>
+  <div class="g-code"><ol><li><code data-dh=""><span class="t-frame">나는 동현이냐?</span></code></li><li><code data-dh="">  <span class="t-assign">동현아</span> <span class="t-num">도옹</span>   <span class="t-cmt">ㅋㅋ 2: i = 1</span></code></li><li><code data-dh="">  <span class="t-out">뿡뿡</span> <span class="t-var">동현</span>   <span class="t-cmt">ㅋㅋ 3: 반복 시작 — i 출력</span></code></li><li><code data-dh="">  <span class="t-ctl">신중동</span> <span class="t-var">동현</span> <span class="t-op">또치</span> <span class="t-num">도오옹</span>? <span class="t-ctl">신중동역</span> <span class="t-num">도오오오오오오오옹</span>   <span class="t-cmt">ㅋㅋ 4: 짝수면 8번 줄로</span></code></li><li><code data-dh="">  <span class="t-out">뿡뿡뿡</span> <span class="t-num">도오옹</span> <span class="t-num">도오오오옹</span> <span class="t-num">도오오오옹</span>   <span class="t-cmt">ㅋㅋ 5: (홀수) 공백</span></code></li><li><code data-dh="">  <span class="t-out">뿡뿡뿡</span> <span class="t-num">도오오옹</span> <span class="t-num">도오오옹</span> <span class="t-num">도오오오오옹</span>   <span class="t-cmt">ㅋㅋ 6: '-' (3 × 3 × 5 = 45)</span></code></li><li><code data-dh="">  <span class="t-ctl">신중동역</span> <span class="t-num">도오오오오오오오오오옹</span>   <span class="t-cmt">ㅋㅋ 7: 짝수 칸을 건너뛰어 10번 줄로</span></code></li><li><code data-dh="">  <span class="t-out">뿡뿡뿡</span> <span class="t-num">도오옹</span> <span class="t-num">도오오오옹</span> <span class="t-num">도오오오옹</span>   <span class="t-cmt">ㅋㅋ 8: (짝수) 공백</span></code></li><li><code data-dh="">  <span class="t-out">뿡뿡뿡</span> <span class="t-num">도오오오오오옹</span> <span class="t-num">도오오오오오오옹</span>   <span class="t-cmt">ㅋㅋ 9: '*' (6 × 7 = 42)</span></code></li><li><code data-dh="">  <span class="t-out">뿡뿡뿡</span>   <span class="t-cmt">ㅋㅋ 10: 줄바꿈</span></code></li><li><code data-dh="">  <span class="t-ctl">신중동</span> <span class="t-var">동현</span><span class="t-minus">ㅠㅠㅠㅠㅠㅠ</span>? <span class="t-halt">오겡끼데스까</span>   <span class="t-cmt">ㅋㅋ 11: i − 6 = 0이면 끝</span></code></li><li><code data-dh="">  <span class="t-assign">동현아</span> <span class="t-var">동현</span><span class="t-num">도옹</span>   <span class="t-cmt">ㅋㅋ 12: i + 1</span></code></li><li><code data-dh="">  <span class="t-ctl">신중동역</span> <span class="t-num">도오오옹</span>   <span class="t-cmt">ㅋㅋ 13: 3번 줄로 돌아간다</span></code></li><li><code data-dh=""><span class="t-frame">동현이구나</span></code></li></ol></div>
   <div class="g-out"><div class="g-out-h">뿡뿡 출력 <span>오겡끼데스까로 중단 · 종료 코드 0</span></div><pre>1 -
 2 *
 3 -
@@ -756,11 +756,11 @@ a.series-item:focus-visible{outline:3px solid #a5791c;outline-offset:3px}
 </figure></section>
 <section class="g-box" id="g-end"><h3><span class="g-num">7</span>끝내는 세 가지 방법</h3><p class="g-intro">프로그램은 셋 중 하나로 끝난다. 플레이그라운드의 상태 줄에 어떻게 끝났는지와 종료 코드가 나온다.</p><div class="g-table-wrap"><table class="g-table "><thead><tr><th>방법</th><th>언제</th><th>종료 코드</th><th>화면</th></tr></thead><tbody><tr><td><code>동현이구나</code></td><td>마지막 줄에 닿았을 때</td><td>0</td><td>동현이구나 — 정상 종료</td></tr><tr><td><code>오겡끼데스까 [&lt;식&gt;]</code></td><td>어디서든 이 문장을 만나면 즉시</td><td>식의 값 (없으면 0)</td><td>…와타시와 겡끼데스.</td></tr><tr><td>범위 밖으로 이동</td><td><code>신중동역</code>의 번호가 0 이하이거나 마지막 줄보다 클 때</td><td>0</td><td>정상 종료로 표시</td></tr></tbody></table></div><ul class="g-rules"><li><b>오겡끼데스까는 가장 강력하다</b> — 반복문 한가운데서도, 신중동의 <code>?</code> 뒤에서도 바로 끝낸다. <code>신중동 동현? 오겡끼데스까</code>는 "동현이 0이면 끝"이라는 관용구다.</li><li><b>플레이그라운드의 오겡끼데스까 버튼</b> — 실행 중인 프로그램을 밖에서 멈춘다. 종료 코드는 130이다.</li><li><b>너무 오래 돌면 멈춘다</b> — 플레이그라운드는 500만 걸음을 넘으면 무한 반복으로 보고 멈춘다.</li></ul><figure class="g-snip">
   <figcaption><span>종료 코드 7로 끝내기</span><button type="button" class="btn g-try" data-code="나는 동현이냐?
-뿡뿡 도옹
-오겡끼데스까 도오오오오오오옹   ㅋㅋ 여기서 끝, 종료 코드 7
-뿡뿡 도오옹   ㅋㅋ 실행되지 않는다
+  뿡뿡 도옹
+  오겡끼데스까 도오오오오오오옹   ㅋㅋ 여기서 끝, 종료 코드 7
+  뿡뿡 도오옹   ㅋㅋ 실행되지 않는다
 동현이구나" data-input="">편집기에서 실행</button></figcaption>
-  <div class="g-code"><ol><li><code data-dh=""><span class="t-frame">나는 동현이냐?</span></code></li><li><code data-dh=""><span class="t-out">뿡뿡</span> <span class="t-num">도옹</span></code></li><li><code data-dh=""><span class="t-halt">오겡끼데스까</span> <span class="t-num">도오오오오오오옹</span>   <span class="t-cmt">ㅋㅋ 여기서 끝, 종료 코드 7</span></code></li><li><code data-dh=""><span class="t-out">뿡뿡</span> <span class="t-num">도오옹</span>   <span class="t-cmt">ㅋㅋ 실행되지 않는다</span></code></li><li><code data-dh=""><span class="t-frame">동현이구나</span></code></li></ol></div>
+  <div class="g-code"><ol><li><code data-dh=""><span class="t-frame">나는 동현이냐?</span></code></li><li><code data-dh="">  <span class="t-out">뿡뿡</span> <span class="t-num">도옹</span></code></li><li><code data-dh="">  <span class="t-halt">오겡끼데스까</span> <span class="t-num">도오오오오오오옹</span>   <span class="t-cmt">ㅋㅋ 여기서 끝, 종료 코드 7</span></code></li><li><code data-dh="">  <span class="t-out">뿡뿡</span> <span class="t-num">도오옹</span>   <span class="t-cmt">ㅋㅋ 실행되지 않는다</span></code></li><li><code data-dh=""><span class="t-frame">동현이구나</span></code></li></ol></div>
   <div class="g-out"><div class="g-out-h">뿡뿡 출력 <span>오겡끼데스까로 중단 · 종료 코드 7</span></div><pre>1</pre></div>
   
 </figure></section>
@@ -802,61 +802,61 @@ a.series-item:focus-visible{outline:3px solid #a5791c;outline-offset:3px}
   &lt;!-- 결과가 이 스크립트 바로 뒤에 나타난다 --&gt;
   &lt;script type="text/donghyun" data-input="6"&gt;
 나는 동현이냐?
-동현아 꽥꽥
-동동현아 도옹
-신중동 동현? 신중동역 도오오오오오오오옹
-동동현아 동동현 동현
-동현아 동현ㅠ
-신중동역 도오오오옹
-뿡뿡 동동현
-뿡뿡뿡
+  동현아 꽥꽥
+  동동현아 도옹
+  신중동 동현? 신중동역 도오오오오오오오옹
+  동동현아 동동현 동현
+  동현아 동현ㅠ
+  신중동역 도오오오옹
+  뿡뿡 동동현
+  뿡뿡뿡
 동현이구나
   &lt;/script&gt;
 
   &lt;!-- data-output="html": 뿡뿡한 글자를 HTML로 렌더링 --&gt;
   &lt;script type="text/donghyun" data-output="html"&gt;
 나는 동현이냐?
-뿡뿡뿡 도오오오오오옹 도오오오오오오오오오옹
-동현아 도오오오오오오오오옹
-동현아 동현 도오오오오오오오오오옹
-동현아 동현도오오오오오오오옹
-뿡뿡뿡 동현
-동현아 도오오오오오옹
-동현아 동현 도오오오오오오오오오옹
-동현아 동현도오옹
-뿡뿡뿡 동현
-동현아 도오오오옹
-동현아 동현 도오오오오오오오오오옹
-동현아 동현도오오오오오옹
-동현아 동현 도오오오오오오오오오옹
-동현아 동현 도오오오오오오오오오옹
-동현아 동현도오오오옹
-동현아 동현 도오오오오오오오오오옹
-동현아 동현도옹
-뿡뿡뿡 동현
-동현아 도오오오오옹
-동현아 동현 도오오오오오오오오오옹
-동현아 동현도오오오옹
-동현아 동현 도오오오오오오오오오옹
-동현아 동현도오오오오오오옹
-동현아 동현 도오오오오오오오오오옹
-동현아 동현도오오오오오오오옹
-동현아 동현 도오오오오오오오오오옹
-동현아 동현도오오오오오오오옹
-뿡뿡뿡 동현
-뿡뿡뿡 도오오오오오옹 도오오오오오오오오오옹
-동현아 도오오오옹
-동현아 동현 도오오오오오오오오오옹
-동현아 동현도오오오오오오옹
-뿡뿡뿡 동현
-동현아 도오오오오오오오오옹
-동현아 동현 도오오오오오오오오오옹
-동현아 동현도오오오오오오오옹
-뿡뿡뿡 동현
-동현아 도오오오오오옹
-동현아 동현 도오오오오오오오오오옹
-동현아 동현도오옹
-뿡뿡뿡 동현
+  뿡뿡뿡 도오오오오오옹 도오오오오오오오오오옹
+  동현아 도오오오오오오오오옹
+  동현아 동현 도오오오오오오오오오옹
+  동현아 동현도오오오오오오오옹
+  뿡뿡뿡 동현
+  동현아 도오오오오오옹
+  동현아 동현 도오오오오오오오오오옹
+  동현아 동현도오옹
+  뿡뿡뿡 동현
+  동현아 도오오오옹
+  동현아 동현 도오오오오오오오오오옹
+  동현아 동현도오오오오오옹
+  동현아 동현 도오오오오오오오오오옹
+  동현아 동현 도오오오오오오오오오옹
+  동현아 동현도오오오옹
+  동현아 동현 도오오오오오오오오오옹
+  동현아 동현도옹
+  뿡뿡뿡 동현
+  동현아 도오오오오옹
+  동현아 동현 도오오오오오오오오오옹
+  동현아 동현도오오오옹
+  동현아 동현 도오오오오오오오오오옹
+  동현아 동현도오오오오오오옹
+  동현아 동현 도오오오오오오오오오옹
+  동현아 동현도오오오오오오오옹
+  동현아 동현 도오오오오오오오오오옹
+  동현아 동현도오오오오오오오옹
+  뿡뿡뿡 동현
+  뿡뿡뿡 도오오오오오옹 도오오오오오오오오오옹
+  동현아 도오오오옹
+  동현아 동현 도오오오오오오오오오옹
+  동현아 동현도오오오오오오옹
+  뿡뿡뿡 동현
+  동현아 도오오오오오오오오옹
+  동현아 동현 도오오오오오오오오오옹
+  동현아 동현도오오오오오오오옹
+  뿡뿡뿡 동현
+  동현아 도오오오오오옹
+  동현아 동현 도오오오오오오오오오옹
+  동현아 동현도오옹
+  뿡뿡뿡 동현
 동현이구나
   &lt;/script&gt;
 &lt;/body&gt;
@@ -2286,20 +2286,20 @@ a.series-item:focus-visible{outline:3px solid #a5791c;outline-offset:3px}
   <!-- 결과가 이 스크립트 바로 뒤에 나타난다 -->
   <script type="text/donghyun" data-input="6">
 나는 동현이냐?
-동현아 꽥꽥
-동동현아 도옹
-신중동 동현? 신중동역 도오오오오오오오옹
-동동현아 동동현 동현
-동현아 동현ㅠ
-신중동역 도오오오옹
-뿡뿡 동동현
-뿡뿡뿡
+  동현아 꽥꽥
+  동동현아 도옹
+  신중동 동현? 신중동역 도오오오오오오오옹
+  동동현아 동동현 동현
+  동현아 동현ㅠ
+  신중동역 도오오오옹
+  뿡뿡 동동현
+  뿡뿡뿡
 동현이구나
   <\/script>
 
   <!-- data-output="html": 뿡뿡한 글자를 HTML로 렌더링 -->
   <script type="text/donghyun" data-output="html">
-${D.encode("<b>동현</b>", { newline: false })}
+${D.encode("<b>동현</b>", { newline: false }).split("\n").map((l) => (l === "나는 동현이냐?" || l === "동현이구나" ? l : "  " + l)).join("\n")}
   <\/script>
 </${"body"}>
 </${"html"}>`;
