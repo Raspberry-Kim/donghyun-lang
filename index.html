@@ -2093,6 +2093,21 @@ a.series-item:focus-visible{outline:3px solid #a5791c;outline-offset:3px}
   code.addEventListener("input", (e) => { curPhys = -1; composing = !!e.isComposing; render(); });
   code.addEventListener("compositionstart", () => { composing = true; });
   code.addEventListener("compositionend", () => { composing = false; render(); });
+  // 커서가 들여쓰기 안에 놓이면 들여쓰기 뒤로 옮기고, 들여쓰기 바로 뒤에서 Backspace를 누르면 윗줄과 합친다
+  const caretLead = () => {
+    const a = code.selectionStart, v = code.value, ls = v.lastIndexOf("\n", a - 1) + 1, le = v.indexOf("\n", ls);
+    return { a, ls, lead: /^[ \t]*/.exec(v.slice(ls, le < 0 ? v.length : le))[0].length };
+  };
+  document.addEventListener("selectionchange", () => {
+    if (document.activeElement !== code || code.selectionStart !== code.selectionEnd) return;
+    const { a, ls, lead } = caretLead();
+    if (a - ls < lead) code.setSelectionRange(ls + lead, ls + lead);
+  });
+  code.addEventListener("beforeinput", (e) => {
+    const { a, ls, lead } = caretLead();
+    if (a !== code.selectionEnd) return;
+    if (e.inputType === "deleteContentBackward" && ls > 0 && a > ls && a - ls <= lead) { e.preventDefault(); code.setRangeText("", ls - 1, a, "end"); curPhys = -1; render(); }
+  });
   code.addEventListener("scroll", syncScroll);
   code.addEventListener("keydown", (e) => {
     if ((e.metaKey || e.ctrlKey) && e.key === "Enter") { e.preventDefault(); start(false); }
