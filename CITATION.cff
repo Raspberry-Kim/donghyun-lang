@@ -20,7 +20,7 @@ abstract: >-
   language specification and 70 example programs. Donghyun-lang is also the
   only control language of three educational browser laboratories by the
   same author: Donghyuncho (Drosophila brain circuits), Donghyunpa
-  (C. elegans touch circuits) and Donghyunbil (village outbreaks on a real
+  (C. elegans touch circuits) and Donghyunvil (village outbreaks on a real
   contact network).
 keywords:
   - esoteric programming language
