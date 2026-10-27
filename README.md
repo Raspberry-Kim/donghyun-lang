@@ -1,5 +1,7 @@
 # 동현랭™ (Donghyun-lang)
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23689480.svg)](https://doi.org/10.5281/zenodo.23689480)
+
 > 나는 동현이냐? … 동현이구나.
 
 **World's Most Quirky Esoteric Language: 동현랭™**
