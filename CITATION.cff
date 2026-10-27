@@ -4,6 +4,7 @@ title: "Donghyun-lang (동현랭): a Korean esoteric programming language with a
 type: software
 version: "1.53"
 date-released: "2026-10-26"
+doi: "10.5281/zenodo.23689480"
 authors:
   - family-names: Kim
     given-names: Dong Hyun
