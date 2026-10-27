@@ -214,6 +214,8 @@ body { background: var(--color-bg); }
 .brand { font-family: var(--font-display); font-size: 1.375rem; letter-spacing: 0.01em; text-decoration: none; color: var(--color-text); }
 .brand span { background: var(--color-duck); color: #26211c; padding: 0 0.3em; border-radius: 4px; margin-left: 0.04em; }
 .brand .tm { display: inline-block; font-size: 0.42em; line-height: 1; vertical-align: baseline; position: relative; top: -1.25em; margin-left: 0.22em; letter-spacing: 0.04em; color: var(--color-text-muted); }
+.doi-badge{display:inline-flex;flex:none;border-radius:4px;overflow:hidden;text-decoration:none;white-space:nowrap;font:500 11px/1 var(--font-code);letter-spacing:0}.doi-badge b{background:#555;color:#fff;padding:5px 6px;font-weight:500}.doi-badge span{background:#007ec6;color:#fff;padding:5px 7px}.doi-badge:hover{filter:brightness(1.1)}.doi-badge:focus-visible{outline:2px solid var(--color-text);outline-offset:2px}
+@media (max-width: 480px) { .doi-badge span { display: none; } }
 .topnav { display: flex; gap: var(--space-1); margin-left: auto; }
 .topnav a { font-size: var(--text-sm); color: var(--color-text-muted); text-decoration: none; padding: var(--space-2) var(--space-3); border-radius: var(--radius-sm); }
 .topnav a:hover { color: var(--color-text); background: var(--color-surface-2); }
@@ -515,6 +517,7 @@ a.series-item:focus-visible{outline:3px solid #a5791c;outline-offset:3px}
 <header class="topbar">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="동현랭 처음으로">동현<span>랭</span><sup class="tm">TM</sup></a>
+    <a class="doi-badge" href="https://doi.org/10.5281/zenodo.23689480" target="_blank" rel="noopener" aria-label="동현랭 Zenodo DOI 10.5281/zenodo.23689480" title="Zenodo DOI (모든 버전)"><b>DOI</b><span>10.5281/zenodo.23689480</span></a>
     <nav class="topnav" aria-label="주요">
       <a href="#playground">플레이그라운드</a>
       <a href="#reference">문법</a>
