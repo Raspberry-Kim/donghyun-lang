@@ -247,7 +247,7 @@ body { background: var(--color-bg); }
 
 .btn { display: inline-flex; align-items: center; gap: 0.4em; font-size: var(--text-sm); font-weight: 600; padding: 0.45em 0.9em; border-radius: var(--radius-sm); border: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-text); white-space: nowrap; }
 .btn:hover { background: var(--color-surface-2); }
-.sponsor-btn { display: inline-flex; align-items: center; gap: 0.35em; flex-shrink: 0; font-size: var(--text-sm); font-weight: 600; padding: 0.35em 0.8em; border-radius: 999px; border: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-text); text-decoration: none; }
+.sponsor-btn { margin-top: var(--space-4); display: inline-flex; align-items: center; gap: 0.35em; flex-shrink: 0; font-size: var(--text-sm); font-weight: 600; padding: 0.35em 0.8em; border-radius: 999px; border: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-text); text-decoration: none; }
 .sponsor-btn:hover { background: var(--color-surface-2); }
 .sponsor-btn svg { color: #bf3989; }
 .btn:disabled { opacity: 0.45; cursor: not-allowed; }
@@ -358,7 +358,6 @@ footer a { color: inherit; }
   .pg, .two { grid-template-columns: 1fr; }
   .editor { min-height: 380px; }
   .topnav { display: none; }
-  .sponsor-btn { margin-left: auto; }
 }
 @media (max-width: 480px) {
   .wrap { padding: 0 var(--space-4); }
@@ -530,7 +529,6 @@ a.series-item:focus-visible{outline:3px solid #a5791c;outline-offset:3px}
       <a href="#encoder">코드 생성기</a>
       <a href="#maker">만든 사람</a>
     </nav>
-    <a class="sponsor-btn" href="https://github.com/sponsors/Raspberry-Kim" target="_blank" rel="noopener" aria-label="GitHub Sponsors로 동현랭 후원하기" title="GitHub Sponsors로 후원하기"><svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M7.655 14.916v-.001h-.002l-.006-.003-.018-.01a22.066 22.066 0 0 1-3.744-2.584C2.045 10.731 0 8.35 0 5.5 0 2.836 2.086 1 4.25 1 5.797 1 7.153 1.802 8 3.02 8.847 1.802 10.203 1 11.75 1 13.914 1 16 2.836 16 5.5c0 2.85-2.044 5.231-3.886 6.818a22.094 22.094 0 0 1-3.433 2.414 7.152 7.152 0 0 1-.31.17l-.018.01-.008.004a.75.75 0 0 1-.69 0Z"></path></svg>후원</a>
     <button class="icon-btn" id="themeBtn" aria-label="밝은/어두운 화면 전환" title="화면 전환">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg>
     </button>
@@ -1526,6 +1524,7 @@ a.series-item:focus-visible{outline:3px solid #a5791c;outline-offset:3px}
       <h2>만든 사람</h2>
       <h3 class="maker-name">김동현</h3>
       <p class="maker-text">인하대학교 의과대학 교수, 백신학·감염학을 연구한다. 아내와 두 아들, 그리고 뚱뚱한 강아지와 함께 살고 있다. 난해한 프로그래밍 언어인 동현랭을 만들었다. 몰입과 불면을 즐긴다. 능률과 실질을 숭상한다. 명랑하고 따뜻한 개발을 지향한다.</p>
+      <a class="sponsor-btn" href="https://github.com/sponsors/Raspberry-Kim" target="_blank" rel="noopener" aria-label="GitHub Sponsors로 동현랭 후원하기" title="GitHub Sponsors로 후원하기"><svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M7.655 14.916v-.001h-.002l-.006-.003-.018-.01a22.066 22.066 0 0 1-3.744-2.584C2.045 10.731 0 8.35 0 5.5 0 2.836 2.086 1 4.25 1 5.797 1 7.153 1.802 8 3.02 8.847 1.802 10.203 1 11.75 1 13.914 1 16 2.836 16 5.5c0 2.85-2.044 5.231-3.886 6.818a22.094 22.094 0 0 1-3.433 2.414 7.152 7.152 0 0 1-.31.17l-.018.01-.008.004a.75.75 0 0 1-.69 0Z"></path></svg>후원</a>
     </div>
   </section>
 </main>
