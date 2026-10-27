@@ -1,62 +1,30 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it using the metadata below."
-title: "Donghyunbil (동현빌): an educational village-outbreak laboratory on a real contact network, controlled through the esoteric language Donghyun-lang"
+title: "Donghyun-lang (동현랭): a Korean esoteric programming language with a browser playground"
 type: software
-version: "0.38.0"
-date-released: "2026-10-27"
+version: "1.53"
+date-released: "2026-10-26"
 authors:
   - family-names: Kim
     given-names: Dong Hyun
     orcid: "https://orcid.org/0000-0001-9883-0229"
     affiliation: "Inha University College of Medicine"
 license: MIT
-repository-code: "https://github.com/raspberry-kim/donghyun-lab3"
-url: "https://raspberry-kim.github.io/donghyun-lab3/"
+repository-code: "https://github.com/Raspberry-Kim/donghyun-lang"
+url: "https://raspberry-kim.github.io/donghyun-lang/"
 abstract: >-
-  Donghyunbil is a browser-based, JavaScript educational tool for exploring
-  infectious disease transmission, vaccination and isolation policies. It
-  simulates hypothetical outbreaks (measles, pertussis, influenza) on the
-  publicly released Haslemere contact data (469 participants, 3 days,
-  5-minute resolution), with all interventions specified only through the
-  esoteric programming language Donghyun-lang. It is a teaching model, not a
-  forecasting or policy-decision tool.
+  Donghyun-lang is an esoteric programming language written in Korean.
+  The repository contains the JavaScript interpreter, a browser playground
+  that runs without installation or a server, a Python interpreter, the
+  language specification and 70 example programs. Donghyun-lang is also the
+  only control language of three educational browser laboratories by the
+  same author: Donghyuncho (Drosophila brain circuits), Donghyunpa
+  (C. elegans touch circuits) and Donghyunbil (village outbreaks on a real
+  contact network).
 keywords:
-  - epidemiology education
-  - infectious disease modelling
-  - vaccination
-  - contact network
-  - citizen science data
   - esoteric programming language
+  - Korean
+  - interpreter
+  - programming education
   - JavaScript
-references:
-  - type: dataset
-    title: "Haslemere contact dataset (skissler/haslemere)"
-    authors:
-      - family-names: Kissler
-        given-names: Stephen M.
-      - family-names: Klepac
-        given-names: Petra
-      - family-names: Tang
-        given-names: Maria
-      - family-names: Conlan
-        given-names: Andrew J. K.
-      - family-names: Gog
-        given-names: Julia R.
-    year: 2020
-    url: "https://github.com/skissler/haslemere"
-  - type: article
-    title: "Sparking \"The BBC Four Pandemic\": Leveraging citizen science and mobile phones to model the spread of disease"
-    authors:
-      - family-names: Kissler
-        given-names: Stephen M.
-      - family-names: Klepac
-        given-names: Petra
-      - family-names: Tang
-        given-names: Maria
-      - family-names: Conlan
-        given-names: Andrew J. K.
-      - family-names: Gog
-        given-names: Julia R.
-    year: 2018
-    journal: bioRxiv
-    doi: "10.1101/479154"
+  - Python
