@@ -12,7 +12,7 @@
 - **현재 버전:** v1.55
 - **언어 명세:** [SPEC.md](SPEC.md)
 
-동현랭으로만 조종하는 여덟 개의 작은 실험실이 있다.
+동현랭으로만 조종하는 열 개의 작은 실험실이 있다.
 
 - **동현초™:** [초파리 회로실험실](https://raspberry-kim.github.io/donghyun-lab1/) · FlyWire 연결망 위에서 초파리 뇌 회로를 자극하고 반응을 본다
 - **동현파™:** [선충 촉각 회로실험실](https://raspberry-kim.github.io/donghyun-lab2/) · 예쁜꼬마선충의 촉각 회로에 자극을 주고 반응을 계산한다
@@ -22,8 +22,10 @@
 - **동현텐™:** [숫자 짝 실험실](https://raspberry-kim.github.io/donghyun-lab6/) · 같은 숫자나 합이 10인 짝을 지우는 숫자 놀이
 - **동현워™:** [중세 전술 실험실](https://raspberry-kim.github.io/donghyun-lab7/) · 문명·병종을 골라 동현AI™와 겨루는 중세 턴제 전술
 - **동현둠™:** [1인칭 슈팅 실험실](https://raspberry-kim.github.io/donghyun-lab8/) · 셰어웨어 DOOM 1편을 브라우저에서, 판·난이도·체력을 코드로
+- **동현크™:** [플랫폼 액션 실험실](https://raspberry-kim.github.io/donghyun-lab9/) · 목숨·변신을 코드로 정하고 나서는 포동이의 횡스크롤 산책
+- **동현몬™:** [동현몬스터 실험실](https://raspberry-kim.github.io/donghyun-lab10/) · 시작 마을·포동이의 성격·출현율을 코드로 정하고 떠나는 작은 몬스터 RPG
 
-아홉 사이트 상단의 **동현의 작은 실험들** 메뉴로 서로 이동할 수 있다. 각 실험실의 출전·설정은 동현랭 코드로만 정한다.
+열한 사이트 상단의 **동현의 작은 실험들** 메뉴로 서로 이동할 수 있다. 각 실험실의 출전·설정은 동현랭 코드로만 정한다.
 
 변경 이력은 [CHANGELOG.md](CHANGELOG.md)에 있다.
 
