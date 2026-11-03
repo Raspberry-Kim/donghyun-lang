@@ -2,8 +2,8 @@ cff-version: 1.2.0
 message: "If you use this software, please cite it using the metadata below."
 title: "Donghyun-lang (동현랭): a Korean esoteric programming language with a browser playground"
 type: software
-version: "1.53"
-date-released: "2026-10-26"
+version: "1.54"
+date-released: "2026-11-03"
 doi: "10.5281/zenodo.23689480"
 authors:
   - family-names: Kim
@@ -18,10 +18,15 @@ abstract: >-
   The repository contains the JavaScript interpreter, a browser playground
   that runs without installation or a server, a Python interpreter, the
   language specification and 70 example programs. Donghyun-lang is also the
-  only control language of three educational browser laboratories by the
-  same author: Donghyuncho (Drosophila brain circuits), Donghyunpa
-  (C. elegans touch circuits) and Donghyunvil (village outbreaks on a real
-  contact network).
+  only control language of eight educational browser laboratories by the
+  same author: Donghyuncho (Drosophila brain circuits on the FlyWire
+  connectome), Donghyunpa (C. elegans touch circuits), Donghyunvil (village
+  outbreaks on a real contact network), Donghyunjeon (a single-player
+  turn-based strategy game with land, sea and air units), Donghyuncop (a
+  one-button cave-flight game), Donghyunten (a number-pair puzzle),
+  Donghyunwar (a single-player medieval turn-based tactics game) and
+  Donghyundoom (the shareware DOOM Episode 1 in the browser). In every
+  laboratory the setup is written only in Donghyun-lang.
 keywords:
   - esoteric programming language
   - Korean
