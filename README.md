@@ -9,13 +9,21 @@
 한국어로 쓰는 난해한 프로그래밍 언어(esoteric language)다. 실행기, 플레이그라운드, 문법 안내, 예제 70개를 모두 담았다. 설치나 서버 없이 브라우저에서 바로 실행된다.
 
 - **바로 써 보기:** [raspberry-kim.github.io/donghyun-lang](https://raspberry-kim.github.io/donghyun-lang)
-- **현재 버전:** v1.53
+- **현재 버전:** v1.54
 - **언어 명세:** [SPEC.md](SPEC.md)
-- **동현초™:** [초파리 회로실험실](https://raspberry-kim.github.io/donghyun-lab1/)
-- **동현파™:** [선충 촉각 회로실험실](https://raspberry-kim.github.io/donghyun-lab2/)
-- **동현빌™:** [마을 유행 실험실](https://raspberry-kim.github.io/donghyun-lab3/)
 
-네 사이트 상단의 **동현의 작은 실험들** 메뉴로 서로 이동할 수 있다.
+동현랭으로만 조종하는 여덟 개의 작은 실험실이 있다.
+
+- **동현초™:** [초파리 회로실험실](https://raspberry-kim.github.io/donghyun-lab1/) · FlyWire 연결망 위에서 초파리 뇌 회로를 자극하고 반응을 본다
+- **동현파™:** [선충 촉각 회로실험실](https://raspberry-kim.github.io/donghyun-lab2/) · 예쁜꼬마선충의 촉각 회로에 자극을 주고 반응을 계산한다
+- **동현빌™:** [마을 유행 실험실](https://raspberry-kim.github.io/donghyun-lab3/) · 실제 접촉망(Haslemere) 위에서 접종·격리를 설계하고 유행을 본다
+- **동현전™:** [턴제 전략 게임](https://raspberry-kim.github.io/donghyun-lab4/) · 육해공 유닛으로 동현AI™와 겨루는 1인용 턴제 전략
+- **동현콥™:** [원버튼 비행 실험실](https://raspberry-kim.github.io/donghyun-lab5/) · 고전 동굴 비행 게임을 포동이의 꼬리콥터로 난다
+- **동현텐™:** [숫자 짝 실험실](https://raspberry-kim.github.io/donghyun-lab6/) · 같은 숫자나 합이 10인 짝을 지우는 숫자 놀이
+- **동현워™:** [중세 전술 실험실](https://raspberry-kim.github.io/donghyun-lab7/) · 문명·병종을 골라 동현AI™와 겨루는 중세 턴제 전술
+- **동현둠™:** [1인칭 슈팅 실험실](https://raspberry-kim.github.io/donghyun-lab8/) · 셰어웨어 DOOM 1편을 브라우저에서, 판·난이도·체력을 코드로
+
+아홉 사이트 상단의 **동현의 작은 실험들** 메뉴로 서로 이동할 수 있다. 각 실험실의 출전·설정은 동현랭 코드로만 정한다.
 
 변경 이력은 [CHANGELOG.md](CHANGELOG.md)에 있다.
 
@@ -130,6 +138,7 @@
 
 ## 변경 기록
 
+- **v1.54:** README와 인용 정보(CITATION.cff)에 여덟 실험실(동현초·동현파·동현빌·동현전·동현콥·동현텐·동현워·동현둠)을 반영. 언어·실행기는 그대로.
 - **v1.53:** 편집기 자동 들여쓰기 추가(명령 2칸, 따로 줄에 있는 주석 3칸). 내려받는 예제 `.dh` 파일에도 적용.
 - **v1.52:** PC 화면 폭 1,600px로 확장, 프로젝트 메뉴에 동현빌 추가. '천천히' 켜고 끄기 버튼과 '만든 사람' 구역 추가.
 - **v1.5:** 41번 Holliday–Segar 예제에 하루 2,400 mL·시간당 100 mL 상한 적용. 아스키 변환기 추가.
