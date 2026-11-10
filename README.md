@@ -12,7 +12,7 @@
 - **현재 버전:** v1.55
 - **언어 명세:** [SPEC.md](SPEC.md)
 
-동현랭으로만 조종하는 열 개의 작은 실험실이 있다.
+동현랭으로만 조종하는 열일곱 개의 작은 실험실이 있다.
 
 - **동현초™:** [초파리 회로실험실](https://raspberry-kim.github.io/donghyun-lab1/) · FlyWire 연결망 위에서 초파리 뇌 회로를 자극하고 반응을 본다
 - **동현파™:** [선충 촉각 회로실험실](https://raspberry-kim.github.io/donghyun-lab2/) · 예쁜꼬마선충의 촉각 회로에 자극을 주고 반응을 계산한다
@@ -24,8 +24,15 @@
 - **동현둠™:** [1인칭 슈팅 실험실](https://raspberry-kim.github.io/donghyun-lab8/) · 셰어웨어 DOOM 1편을 브라우저에서, 판·난이도·체력을 코드로
 - **동현크™:** [플랫폼 액션 실험실](https://raspberry-kim.github.io/donghyun-lab9/) · 목숨·변신을 코드로 정하고 나서는 포동이의 횡스크롤 산책
 - **동현몬™:** [동현몬스터 실험실](https://raspberry-kim.github.io/donghyun-lab10/) · 시작 마을·포동이의 성격·출현율을 코드로 정하고 떠나는 작은 몬스터 RPG
+- **동현주™:** [얼굴 퍼즐 실험실](https://raspberry-kim.github.io/donghyun-lab11/) · 같은 얼굴 셋을 나란히 맞추면 잡히는 얼굴 판 퍼즐
+- **동현심™:** [도시 만들기 실험실](https://raspberry-kim.github.io/donghyun-lab12/) · 강가 평지에 길과 전선을 깔고 작은 도시를 키운다
+- **동현램™:** [도시 부수기 실험실](https://raspberry-kim.github.io/donghyun-lab13/) · 코드로 선택한 몬스터가 열두 동네를 무너뜨리는 1인용 도시 부수기
+- **동현큐™:** [선 긋기 실험실](https://raspberry-kim.github.io/donghyun-lab14/) · 방식을 코드로 정하는 1인용 선 긋기 땅따먹기
+- **동현닥™:** [알약 실험실](https://raspberry-kim.github.io/donghyun-lab15/) · 속도를 코드로 정하는 1인용 알약 퍼즐
+- **동현삼™:** [삼국 전략 실험실](https://raspberry-kim.github.io/donghyun-lab16/) · 시작값과 규칙 수치를 코드로 정하는 1인용 삼국 전략
+- **동현항™:** [항해 교역 실험실](https://raspberry-kim.github.io/donghyun-lab17/) · 시작값과 규칙 수치를 코드로 정하는 1인용 항해 · 교역 놀이
 
-열한 사이트 상단의 **동현의 작은 실험들** 메뉴로 서로 이동할 수 있다. 각 실험실의 출전·설정은 동현랭 코드로만 정한다.
+열여덟 사이트 상단의 **동현의 작은 실험들** 메뉴로 서로 이동할 수 있다. 각 실험실의 출전·설정은 동현랭 코드로만 정한다.
 
 ### 조작 방법
 
