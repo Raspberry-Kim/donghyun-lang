@@ -29,8 +29,8 @@
 - **동현램™:** [도시 부수기 실험실](https://raspberry-kim.github.io/donghyun-lab13/) · 코드로 선택한 몬스터가 열두 동네를 무너뜨리는 1인용 도시 부수기
 - **동현큐™:** [선 긋기 실험실](https://raspberry-kim.github.io/donghyun-lab14/) · 방식을 코드로 정하는 1인용 선 긋기 땅따먹기
 - **동현닥™:** [알약 실험실](https://raspberry-kim.github.io/donghyun-lab15/) · 속도를 코드로 정하는 1인용 알약 퍼즐
-- **동현삼™:** [삼국 전략 실험실](https://raspberry-kim.github.io/donghyun-lab16/) · 시작값과 규칙 수치를 코드로 정하는 1인용 삼국 전략
-- **동현항™:** [항해 교역 실험실](https://raspberry-kim.github.io/donghyun-lab17/) · 시작값과 규칙 수치를 코드로 정하는 1인용 항해 · 교역 놀이
+- **동현삼™:** [삼국 전략 실험실](https://raspberry-kim.github.io/donghyun-lab16/) · 시작값과 규칙 수치를 코드로 정하는 1인용 삼국지 전략 시뮬레이션 게임
+- **동현항™:** [항해 교역 실험실](https://raspberry-kim.github.io/donghyun-lab17/) · 시작값과 규칙 수치를 코드로 정하는 1인용 항해 · 교역 시뮬레이션 게임
 
 열여덟 사이트 상단의 **동현의 작은 실험들** 메뉴로 서로 이동할 수 있다. 각 실험실의 출전·설정은 동현랭 코드로만 정한다.
 
