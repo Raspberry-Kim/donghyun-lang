@@ -218,5 +218,5 @@
     });
   }
 
-  return { VM, run, encode, runScripts, DonghyunError, START, END, version: "1.59.0" };
+  return { VM, run, encode, runScripts, DonghyunError, START, END, version: "2.00.0" };
 });
