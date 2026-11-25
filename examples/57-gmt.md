@@ -236,4 +236,4 @@
 
 log₂ 역가는 '몇 번째 희석까지 양성이었나'를 뜻하므로 정수 계단 위의 등간격 자료다. 산술평균은 가장 높은 역가 하나에 끌려가 112처럼 실제 희석 계단에 없는 값이 된다.
 
-- [WHO Immunological Basis for Immunization Series (항체가 해석)](https://www.who.int/teams/immunization-vaccines-and-biologicals/essential-programme-on-immunization/implementation/immunological-basis-for-immunization-series)
+- [WHO Immunological Basis for Immunization Series (항체가 해석)](https://www.who.int/teams/immunization-vaccines-and-biologicals/policies/the-immunological-basis-for-immunization-series)
